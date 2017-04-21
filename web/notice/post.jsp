@@ -22,8 +22,8 @@
 
 
 <link href="<%=basePath %>notice/post.css" rel="stylesheet" type="text/css" />
-<form id="orderForm" action="<%=basePath%>postNotice" method="get">
 
+<form action="#">
     <fieldset>
         <legend> 发布新闻 </legend>
         <span style='display:inline-block;margin-top:15px;'>
@@ -32,7 +32,7 @@
         </span>
             <span style='display:inline-block;'>
             <label for="noticeAuthor">作者:</label>
-            <input type="text" name="noticeAuthor" id="noticeAuthor" placeholder="请输入新闻标题" required="required" autofocus="autofocus" maxlength="30" minlength="0"/>
+            <input type="text" name="noticeAuthor" id="noticeAuthor" placeholder="管理员" required="required" autofocus="autofocus" maxlength="30" minlength="0"/>
         </span>
 
         <span style='display:inline-block;'>
@@ -55,10 +55,11 @@
         </script>
 
         <%--TODO:上传相关附件--%>
+
     </fieldset>
-
-
-
-    <input type="submit" value="发 布" />
-
+    <input type="submit" value="发 布" onclick="checkAndSubmit();"/>
 </form>
+
+
+<%--用来提交信息的隐藏表单--%>
+<form id="postNoticeForm" action="<%=basePath%>postNotice" enctype="multipart/form-data" method="POST" target="_blank"style=" display:none"></form>
