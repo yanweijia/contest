@@ -1,0 +1,157 @@
+/* Style the form with a coloured background (and a gradient for Gecko/WebKit browsers), along with curved corners and a drop shadow */
+
+form {
+
+    margin: 0 auto;
+    padding: 5px 5px;
+    overflow: auto;
+    color: #3e4a49;
+    background-color: #f5eedb;
+    background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#f5eedb), color-stop(1, #faf8f1) );
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+
+form * {
+    line-height: 1em;
+}
+
+
+/* Give each fieldset a darker background, dark curved border and plenty of space */
+
+fieldset {
+    padding: 0 20px 20px;
+    margin: 0 0 30px;
+    border: 1px solid #593131;
+    background: #eae1c0;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+/* Give each fieldset legend a nice curvy green box with white text */
+legend {
+    color: #fff;
+    background: #8fb98b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    width: 9em;
+    border: 2px solid #593131;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+
+/* The field labels */
+label {
+    padding: .4em 0 0 0;
+    margin: .15em .5em 0 0;
+}
+
+/* Style the fields */
+
+input, select, textarea {
+    margin: 0;
+    padding: .4em;
+    width: 200px;
+}
+input, textarea{
+    border: 2px solid #eae1c0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: rgba(0,0,0,.5) 1px 1px 1px 1px inset;
+    -moz-box-shadow: rgba(0,0,0,.5) 1px 1px 1px 1px inset;
+    -webkit-box-shadow: rgba(0,0,0,.5) 1px 1px 1px 1px inset;
+    background: #fff;
+}
+input {
+    font-size: .9em;
+}
+select {
+    font-size:1em;
+    padding: 1px 1px;
+    margin-bottom: .5em;
+    position: relative;
+    top: .3em;
+}
+textarea {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: .9em;
+}
+
+
+/* 有焦点时去阴影加边框 */
+form *:focus {
+    border: 2px solid #593131;
+    outline: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+/* 合法填写合法的表单背景为绿色 */
+
+input:valid, textarea:valid {
+    background: #efe;
+}
+
+
+/* 提交按钮 */
+
+input[type="submit"] {
+    margin: 0 auto;
+    width: 12em;
+    padding: 10px;
+    border: 2px solid #593131;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    color: #fff;
+    background: #593131;
+    font-size: 1.2em;
+    font-weight: bold;
+    -webkit-appearance: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:active {
+    cursor: pointer;
+    background: #fff;
+    color: #593131;
+}
+
+input[type="submit"]:active {
+    background: #eee;
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+/* Validator error boxes */
+.error {
+    background-color: #fffe36;
+    border: 1px solid #e1e16d;
+    font-size: .8em;
+    color: #000;
+    padding: .3em;
+    margin-left: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}

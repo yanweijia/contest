@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="contest@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="contest">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="auction"/>
+    <schema id="4" parent="1" name="cloudinbox"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="test"/>
+    <table id="9" parent="2" name="notice"/>
+    <column id="10" parent="9" name="nid">
+      <Position>1</Position>
+      <Comment>新闻编号</Comment>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="9" name="author">
+      <Position>2</Position>
+      <Comment>发布人(作者)</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <DefaultExpression>&apos;管理员&apos;</DefaultExpression>
+    </column>
+    <column id="12" parent="9" name="posttime">
+      <Position>3</Position>
+      <Comment>发布时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="9" name="viewCount">
+      <Position>4</Position>
+      <Comment>浏览次数</Comment>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="14" parent="9" name="title">
+      <Position>5</Position>
+      <Comment>新闻标题</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="type">
+      <Position>6</Position>
+      <Comment>新闻类型</Comment>
+      <DataType>enum(&apos;新闻&apos;, &apos;公告&apos;, &apos;大赛信息&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;新闻&apos;</DefaultExpression>
+    </column>
+    <column id="16" parent="9" name="content">
+      <Position>7</Position>
+      <Comment>新闻内容</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="17" parent="9" name="PRIMARY">
+      <ColNames>nid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
