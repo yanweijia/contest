@@ -6,9 +6,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import utils.CodeUtils;
 import utils.ConfigUtils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,6 +36,12 @@ public class postNotice extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String noticeTitle = null , noticeAuthor = null , noticeContent = null , noticeType = null;
+
+        //TODO:判断用户是否拥有发送notice的权限.在过滤器判断即可
+
+
+
+
 
         //(检测是否为多媒体上传)
         if (!ServletFileUpload.isMultipartContent(request)) {

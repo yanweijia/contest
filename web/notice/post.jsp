@@ -8,6 +8,8 @@
 <%
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
 %>
+<%--TODO:用过滤器判断用户是否拥有发送notice的权限--%>
+
 
 <%--下面这些引用是umeditor--%>
 <link href="<%=basePath %>plug-in/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
