@@ -19,32 +19,32 @@
 <script type="text/javascript" charset="utf-8" src="<%=basePath %>plug-in/umeditor/umeditor.min.js"></script>
 <script type="text/javascript" src="<%=basePath %>plug-in/umeditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="<%=basePath %>js/base64.js"></script>   <%--base64加密--%>
-
+<script type="text/javascript" src="<%=basePath %>notice/post.js"></script>
 
 <link href="<%=basePath %>notice/post.css" rel="stylesheet" type="text/css" />
 
-<form action="#">
-    <fieldset>
-        <legend> 发布新闻 </legend>
+<div class="noticeBackground">
+    <fieldset class="fieldset">
+        <legend class="legend"> 发布新闻 </legend>
         <span style='display:inline-block;margin-top:15px;'>
-            <label for="noticeTitle">新闻标题:</label>
-            <input type="text" name="noticeTitle" id="noticeTitle" placeholder="请输入新闻标题" required="required" autofocus="autofocus" maxlength="50" minlength="4"/>
+            <label class="label" for="noticeTitle">新闻标题:</label>
+            <input class="input" type="text" name="noticeTitle" id="noticeTitle" placeholder="请输入新闻标题" required="required" autofocus="autofocus" maxlength="50" minlength="4"/>
         </span>
-            <span style='display:inline-block;'>
-            <label for="noticeAuthor">作者:</label>
-            <input type="text" name="noticeAuthor" id="noticeAuthor" placeholder="管理员" required="required" autofocus="autofocus" maxlength="30" minlength="0"/>
+        <span style='display:inline-block;'>
+            <label class="label" for="noticeAuthor">作者:</label>
+            <input class="input" type="text" name="noticeAuthor" id="noticeAuthor" placeholder="管理员" required="required" autofocus="autofocus" maxlength="30" minlength="0"/>
         </span>
 
         <span style='display:inline-block;'>
-            <label for="noticeType">新闻类型:</label>
-            <select name="noticeType" id="noticeType">
+            <label class="label" for="noticeType">新闻类型:</label>
+            <select class="select" name="noticeType" id="noticeType">
                 <option>新闻</option>
                 <option>公告</option>
                 <option>大赛信息</option>
             </select>
         </span>
         <span>
-        <label style='display:block;padding-bottom:5px;'>新闻内容:</label>
+        <label class="label" style='display:block;padding-bottom:5px;'>新闻内容:</label>
         </span>
 
         <script type="text/plain" id="noticeContent" style="width:100%;height:200px;">
@@ -57,8 +57,8 @@
         <%--TODO:上传相关附件--%>
 
     </fieldset>
-    <input type="submit" value="发 布" onclick="checkAndSubmit();"/>
-</form>
+    <input type="button" class="submit" value="发 布" onclick="checkAndSubmit();"/>
+</div>
 
 
 <%--用来提交信息的隐藏表单--%>

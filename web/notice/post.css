@@ -1,6 +1,6 @@
 /* Style the form with a coloured background (and a gradient for Gecko/WebKit browsers), along with curved corners and a drop shadow */
 
-form {
+.noticeBackground {
 
     margin: 0 auto;
     padding: 5px 5px;
@@ -16,14 +16,14 @@ form {
 
 /* Give form elements consistent margin, padding and line height */
 
-form * {
+.noticeBackground * {
     line-height: 1em;
 }
 
 
 /* Give each fieldset a darker background, dark curved border and plenty of space */
 
-fieldset {
+.fieldset {
     padding: 0 20px 20px;
     margin: 0 0 30px;
     border: 1px solid #593131;
@@ -34,7 +34,7 @@ fieldset {
 }
 
 /* Give each fieldset legend a nice curvy green box with white text */
-legend {
+.legend {
     color: #fff;
     background: #8fb98b;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,19 +52,19 @@ legend {
 
 
 /* The field labels */
-label {
+.label {
     padding: .4em 0 0 0;
     margin: .15em .5em 0 0;
 }
 
 /* Style the fields */
 
-input, select, textarea {
+.input, .select{
     margin: 0;
     padding: .4em;
     width: 200px;
 }
-input, textarea{
+.input{
     border: 2px solid #eae1c0;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -73,25 +73,41 @@ input, textarea{
     -moz-box-shadow: rgba(0,0,0,.5) 1px 1px 1px 1px inset;
     -webkit-box-shadow: rgba(0,0,0,.5) 1px 1px 1px 1px inset;
     background: #fff;
-}
-input {
     font-size: .9em;
 }
-select {
+.select {
     font-size:1em;
     padding: 1px 1px;
     margin-bottom: .5em;
     position: relative;
     top: .3em;
 }
-textarea {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: .9em;
+
+.select:focus {
+    border: 2px solid #593131;
+    outline: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
-
 /* 有焦点时去阴影加边框 */
-form *:focus {
+/*.noticeBackground */
+/**:focus {*/
+    /*border: 2px solid #593131;*/
+    /*outline: none;*/
+    /*box-shadow: none;*/
+    /*-moz-box-shadow: none;*/
+    /*-webkit-box-shadow: none;*/
+/*}*/
+
+/* 合法填写合法的表单背景为绿色 */
+
+.input:valid {
+    background: #efe;
+}
+
+.input:focus {
     border: 2px solid #593131;
     outline: none;
     box-shadow: none;
@@ -100,16 +116,9 @@ form *:focus {
 }
 
 
-/* 合法填写合法的表单背景为绿色 */
-
-input:valid, textarea:valid {
-    background: #efe;
-}
-
-
 /* 提交按钮 */
 
-input[type="submit"] {
+.submit {
     margin: 0 auto;
     width: 12em;
     padding: 10px;
@@ -127,13 +136,13 @@ input[type="submit"] {
     -webkit-appearance: none;
 }
 
-input[type="submit"]:hover, input[type="submit"]:active {
+.submit:hover, .submit:active {
     cursor: pointer;
     background: #fff;
     color: #593131;
 }
 
-input[type="submit"]:active {
+.submit:active {
     background: #eee;
     box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
     -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
