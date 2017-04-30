@@ -114,10 +114,11 @@ public class NoticeDao {
      * 根据页号获取新闻
      * @param pageNum 页号,从1开始
      * @param perPage 每页新闻数
+     * @param type 新闻类型
      * @return 符合要求的新闻集合
      */
-    public static List<Notice> getNoticeByPage(int pageNum,int perPage){
-        return queryNotice("",pageNum,perPage);
+    public static List<Notice> getNoticeByPage(int pageNum,int perPage,String type){
+        return queryNotice("",pageNum,perPage,type);
     }
 
 
@@ -126,12 +127,14 @@ public class NoticeDao {
      * @param key 关键词
      * @param pageNum 页号,从1开始
      * @param perPage 每页新闻个数
+     * @param type 新闻类型
      * @return 结果
      */
-    public static List<Notice> queryNotice(String key,int pageNum,int perPage){
+    public static List<Notice> queryNotice(String key,int pageNum,int perPage,String type){
         List<Notice> list = new ArrayList<Notice>();
-        String sql = "SELECT * FROM notice WHERE title LIKE '%" + key + "%' OR content LIKE '%" + key + "%'" +
-                " LIMIT " + ((pageNum-1) * perPage) + "," + perPage;
+        if(type==null || type.equals(""))  type = "";
+        String sql = "SELECT * FROM notice WHERE (title LIKE '%" + key + "%' OR content LIKE '%" + key + "%')" +
+                " AND type LIKE '%" + type + "%' LIMIT " + ((pageNum-1) * perPage) + "," + perPage;
         Connection conn = DBManager.getConnection();
         ResultSet rs = null;
         try{
