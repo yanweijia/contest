@@ -11,6 +11,8 @@ public class Notice {
   private String type;
   private String content;
 
+  public Notice(){}
+
   public Notice(long nid, String author, Timestamp posttime, long viewcount, String title, String type, String content) {
     this.nid = nid;
     this.author = author;

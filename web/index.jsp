@@ -5,11 +5,15 @@
   Time: 21:37
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+  String rootPath = application.getRealPath( "/" );
+  String rootPath2 = request.getContextPath();
+%>
 <html>
   <head>
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <jsp:include page="notice/list.jsp?pageNum=1"/>
   </body>
 </html>

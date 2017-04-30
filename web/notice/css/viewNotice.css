@@ -1,0 +1,23 @@
+.center{
+    text-align:center;
+}
+.notice-title{
+    margin-top:10px;
+    width:90%;
+}
+.notice-metas{
+    color:gray;
+    width:90%;
+}
+.notice-content{
+    margin: 0 auto;
+    margin-top:20px;
+    width:90%;
+}
+.hr-gray{
+    border:1px solid #EEE;
+    width:90%;
+}
+.inline{
+    display:inline-block;
+}

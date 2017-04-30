@@ -1,13 +1,14 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="entity.Notice" %>
-<%@ page import="dao.NoticeDao" %><%--
+<%@ page import="dao.NoticeDao" %>
+<%@ page import="utils.NetUtils" %>
+<%--
     根据传递进来的参数nid来显示指定新闻.
   Created by IntelliJ IDEA.
   User: weijia
   Date: 2017-04-23
   Time: 1:20
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%
     String noticeID = request.getParameter("nid");
     int nid = 0;
@@ -29,4 +30,29 @@
     String type = notice.getType();
     String content = notice.getContent();
 %>
+<link href="<%=NetUtils.getBasePath(request) %>notice/css/viewNotice.css" rel="stylesheet" type="text/css" />
+<div>
+    <h3 class='notice-title center' style="font-weight:bold;">
+        <%=noticeTitle %>
+    </h3>
+
+    <p class="notice-metas center">
+        <span class='notice-type inline'>
+            分类：<%=type %>
+        </span>&nbsp;
+        <span class='notice-posttime inline'>
+            发布时间：<%=postTime.substring(0,16) %>
+        </span>&nbsp;
+        <span class='notice-author inline'>
+            发布人：<%=noticeAuthor %>
+        </span>&nbsp;
+        <span class='notice-count inline'>
+            浏览次数：<%=viewCount %>
+        </span>
+    </p>
+    <hr class='hr-gray'/>
+    <div class='notice-content'>
+        <%=content %>
+    </div>
+</div>
 

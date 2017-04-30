@@ -1,29 +1,27 @@
-<%--
+<%@ page import="utils.NetUtils" %><%--
   Created by IntelliJ IDEA.
   User: weijia
   Date: 2017-04-20
   Time: 21:58
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
-%>
 <%--TODO:用过滤器判断用户是否拥有发送notice的权限--%>
 
 
+
 <%--下面这些引用是umeditor--%>
-<link href="<%=basePath %>plug-in/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="<%=NetUtils.getBasePath(request) %>plug-in/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="<%=NetUtils.getBasePath(request) %>plug-in/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="<%=NetUtils.getBasePath(request) %>plug-in/ueditor/lang/zh-cn/zh-cn.js"></script>
 
-<%--TODO:防止JQuery重复添加--%>
-<script type="text/javascript" src="<%=basePath %>plug-in/umeditor/third-party/jquery.min.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="<%=basePath %>plug-in/umeditor/umeditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="<%=basePath %>plug-in/umeditor/umeditor.min.js"></script>
-<script type="text/javascript" src="<%=basePath %>plug-in/umeditor/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript" src="<%=basePath %>js/base64.js"></script>   <%--base64加密--%>
-<script type="text/javascript" src="<%=basePath %>notice/post.js"></script>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>js/base64.js"></script>   <%--base64加密--%>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>notice/js/post.js"></script>
+<link href="<%=NetUtils.getBasePath(request) %>notice/css/post.css" rel="stylesheet" type="text/css" />
 
-<link href="<%=basePath %>notice/post.css" rel="stylesheet" type="text/css" />
+
+<%--TODO: JQuery包,后期集成的时候记得去除--%>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
 
 <div class="noticeBackground">
     <fieldset class="fieldset">
@@ -53,7 +51,7 @@
             <p>请输入新闻内容</p>
         </script>
         <script type="text/javascript">
-            var um = UM.getEditor('noticeContent', { initialFrameWidth: null });  //实例化编辑器,宽度自适应
+            var ueditor = UE.getEditor('noticeContent', { initialFrameWidth: null });  //实例化编辑器,宽度自适应
         </script>
 
         <%--TODO:上传相关附件--%>
@@ -64,4 +62,4 @@
 
 
 <%--用来提交信息的隐藏表单--%>
-<form id="postNoticeForm" action="<%=basePath%>postNotice" enctype="multipart/form-data" method="POST" target="_blank"style=" display:none"></form>
+<form id="postNoticeForm" action="<%=NetUtils.getBasePath(request)%>postNotice" enctype="multipart/form-data" method="POST" target="_blank"style=" display:none"></form>
