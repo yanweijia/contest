@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:contest</introspection-schemas>
       <resolve-scope>performance_schema:</resolve-scope>
+      <unqualified-resolve-schemas>performance_schema:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

@@ -11,7 +11,7 @@
 %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>上海市大学生应用技术能力大赛官网</title>
   </head>
   <body>
   <jsp:include page="notice/list.jsp?pageNum=1"/>
