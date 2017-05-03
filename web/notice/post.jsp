@@ -54,12 +54,10 @@
             var ueditor = UE.getEditor('noticeContent', { initialFrameWidth: null });  //实例化编辑器,宽度自适应
         </script>
 
-        <%--TODO:上传相关附件--%>
-
     </fieldset>
     <input type="button" class="submit" value="发 布" onclick="checkAndSubmit();"/>
 </div>
 
 
 <%--用来提交信息的隐藏表单--%>
-<form id="postNoticeForm" action="<%=NetUtils.getBasePath(request)%>postNotice" enctype="multipart/form-data" method="POST" target="_blank"style=" display:none"></form>
+<form id="postNoticeForm" action="<%=NetUtils.getBasePath(request)%>postNotice" method="POST" target="_blank"style=" display:none"></form>

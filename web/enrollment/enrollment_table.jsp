@@ -13,6 +13,7 @@
 
 
 <form id="form_enrollment" name="form_enrollment" action="" method="GET" style="width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
+    <input type="hidden" name="method" value="<%="new" %>" required readonly/>
     <input type="hidden" name="season" value="2017" required readonly/>
     <table border="1" cellspacing="0px" bordercolor="gray" id="table_enrollment">
         <colgroup>
@@ -139,6 +140,7 @@
             <tr style=";height:40px">
                 <td rowspan="4" style="">
                     参赛队员信息<span style="color:red;">*</span>
+                    <input type="hidden" name="studentMid1" id="input_studentMid1" value="0" placeholder="参赛队员编号,当更新报名表的时候可以借此字段将参赛队员信息更新到数据库中" required/>
                 </td>
                 <td style="text-align:right;">
                     姓名
@@ -347,8 +349,9 @@
         </tbody>
     </table>
     <div style="width:100%;align-content: center;">
-        <input type="submit" class="submitbtn" value="提交" />
-        <input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" />
+        <span style="width:50%;"><input type="submit" class="submitbtn" value="提交" /></span>
+
+        <span style="width:50%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
     </div>
 
 </form>
