@@ -12,9 +12,9 @@
 <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
 
 
-<form action="" method="GET" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
+<form id="form_enrollment" name="form_enrollment" action="" method="GET" style="width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
     <input type="hidden" name="season" value="2017" required readonly/>
-    <table width="700px" border="1" cellspacing="0px" bordercolor="gray">
+    <table border="1" cellspacing="0px" bordercolor="gray" id="table_enrollment">
         <colgroup>
             <col style="width:20%;"/>
             <col style="width:16%;"/>
@@ -150,7 +150,7 @@
                     身份证
                 </td>
                 <td style="">
-                    <input type="text" name="studentIDCard1" id="input_studentIDCard1" minlength="18" maxlength="18" required/>
+                    <input type="text" name="studentIDCard1" id="input_studentIDCard1" minlength="18" maxlength="18" onchange="autoCalcAge(this)" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -183,7 +183,7 @@
                     专业
                 </td>
                 <td style="">
-                    <input type="text" name="studentMajor1" id="input_studentMajor1" minlength="2" maxlength="15" required/>
+                    <input type="text" name="studentMajor1" id="input_studentMajor1" minlength="2" maxlength="30" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -216,13 +216,13 @@
                     姓名
                 </td>
                 <td style="">
-                    <input type="text" name="studentName2" id="input_studentName2" maxlength="15" minlength="1" class="student2"/>
+                    <input type="text" name="studentName2" id="input_studentName2" maxlength="15" minlength="1" class="student2" required/>
                 </td>
                 <td style="text-align:right;">
                     身份证
                 </td>
                 <td style="">
-                    <input type="text" name="studentIDCard2" id="input_studentIDCard2" minlength="18" maxlength="18" class="student2"/>
+                    <input type="text" name="studentIDCard2" id="input_studentIDCard2" minlength="18" maxlength="18" onchange="autoCalcAge(this)" class="student2" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -230,7 +230,7 @@
                     年级
                 </td>
                 <td style="">
-                    <select name="studentGrade2" id="select_studentGrade2" class="student2">
+                    <select name="studentGrade2" id="select_studentGrade2" class="student2" required>
                         <option value="1">大一</option>
                         <option value="2">大二</option>
                         <option value="3">大三</option>
@@ -241,7 +241,7 @@
                     年龄
                 </td>
                 <td style="">
-                    <input type="text" name="studentAge2" id="input_studentAge2" maxlength="2" minlength="2" class="student2"/>
+                    <input type="text" name="studentAge2" id="input_studentAge2" maxlength="2" minlength="2" class="student2" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -249,13 +249,13 @@
                     院系
                 </td>
                 <td style="">
-                    <input type="text" name="studentCollege2" id="input_studentCollege2" minlength="2" maxlength="15" class="student2"/>
+                    <input type="text" name="studentCollege2" id="input_studentCollege2" minlength="2" maxlength="15" class="student2" required/>
                 </td>
                 <td style="text-align:right;">
                     专业
                 </td>
                 <td style="">
-                    <input type="text" name="studentMajor2" id="input_studentMajor2" minlength="2" maxlength="15" class="student2"/>
+                    <input type="text" name="studentMajor2" id="input_studentMajor2" minlength="2" maxlength="30" class="student2" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -263,13 +263,13 @@
                     电子邮箱
                 </td>
                 <td style="">
-                    <input type="email" name="studentEmail2" id="input_studentEmail2" minlength="5" maxlength="50" class="student2"/>
+                    <input type="email" name="studentEmail2" id="input_studentEmail2" minlength="5" maxlength="50" class="student2" required/>
                 </td>
                 <td style="text-align:right;">
                     联系电话
                 </td>
                 <td style="">
-                    <input type="tel" name="studentPhone2" id="input_studentPhone2" minlength="11" maxlength="12" class="student2"/>
+                    <input type="tel" name="studentPhone2" id="input_studentPhone2" minlength="11" maxlength="12" class="student2" required/>
                 </td>
             </tr>
 
@@ -288,13 +288,13 @@
                     姓名
                 </td>
                 <td style="">
-                    <input type="text" name="studentName3" id="input_studentName3" maxlength="15" minlength="1" class="student3"/>
+                    <input type="text" name="studentName3" id="input_studentName3" maxlength="15" minlength="1" class="student3" required/>
                 </td>
                 <td style="text-align:right;">
                     身份证
                 </td>
                 <td style="">
-                    <input type="text" name="studentIDCard3" id="input_studentIDCard3" minlength="18" maxlength="18" class="student3"/>
+                    <input type="text" name="studentIDCard3" id="input_studentIDCard3" minlength="18" maxlength="18" onchange="autoCalcAge(this)" class="student3" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -302,7 +302,7 @@
                     年级
                 </td>
                 <td style="">
-                    <select name="studentGrade3" id="select_studentGrade3" class="student3">
+                    <select name="studentGrade3" id="select_studentGrade3" class="student3" required>
                         <option value="1">大一</option>
                         <option value="2">大二</option>
                         <option value="3">大三</option>
@@ -313,7 +313,7 @@
                     年龄
                 </td>
                 <td style="">
-                    <input type="text" name="studentAge3" id="input_studentAge3" maxlength="2" minlength="2" class="student3"/>
+                    <input type="text" name="studentAge3" id="input_studentAge3" maxlength="2" minlength="2" class="student3" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -321,13 +321,13 @@
                     院系
                 </td>
                 <td style="">
-                    <input type="text" name="studentCollege3" id="input_studentCollege3" minlength="2" maxlength="15" class="student3"/>
+                    <input type="text" name="studentCollege3" id="input_studentCollege3" minlength="2" maxlength="15" class="student3" required/>
                 </td>
                 <td style="text-align:right;">
                     专业
                 </td>
                 <td style="">
-                    <input type="text" name="studentMajor3" id="input_studentMajor3" minlength="2" maxlength="15" class="student3"/>
+                    <input type="text" name="studentMajor3" id="input_studentMajor3" minlength="2" maxlength="30" class="student3" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -335,18 +335,22 @@
                     电子邮箱
                 </td>
                 <td style="">
-                    <input type="email" name="studentEmail3" id="input_studentEmail3" minlength="5" maxlength="50" class="student3"/>
+                    <input type="email" name="studentEmail3" id="input_studentEmail3" minlength="5" maxlength="50" class="student3" required/>
                 </td>
                 <td style="text-align:right;">
                     联系电话
                 </td>
                 <td style="">
-                    <input type="tel" name="studentPhone3" id="input_studentPhone3" minlength="11" maxlength="12" class="student3"/>
+                    <input type="tel" name="studentPhone3" id="input_studentPhone3" minlength="11" maxlength="12" class="student3" required/>
                 </td>
             </tr>
-
         </tbody>
     </table>
+    <div style="width:100%;align-content: center;">
+        <input type="submit" class="submitbtn" value="提交" />
+        <input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" />
+    </div>
+
 </form>
 
 <%--表单验证js--%>

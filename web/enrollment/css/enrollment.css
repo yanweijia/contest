@@ -1,3 +1,9 @@
 .inline-block{
     display:inline-block;
 }
+.submitbtn,.resetbtn{
+    text-align:center;
+    padding:5px 10px;
+    margin-top:20px;
+    margin-left:20px;
+}
