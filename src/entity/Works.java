@@ -11,6 +11,8 @@ public class Works {
   private String teachername;
   private String teacherphone;
 
+  public Works() {
+  }
 
   public Works(Long wid, Long sid, String season, String name, String college, String majortype, String category, String teachername, String teacherphone) {
     this.wid = wid;
