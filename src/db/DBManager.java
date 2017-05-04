@@ -16,7 +16,7 @@ import java.util.Properties;
  * 参考: <a href='http://blog.csdn.net/jj88888/article/details/41519589'>点击转到博客</a>
  */
 public class DBManager {
-    private static final String configFile = "dbcp.properties";
+    private static final String configFile = "config/dbcp.properties";
     private static Properties properties = new Properties();
     private static DataSource dataSource;
     private static final Logger logger = LogManager.getLogger(DBManager.class);

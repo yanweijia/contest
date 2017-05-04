@@ -22,7 +22,7 @@ public class ConfigUtils {
     static {
         try {
             //初始化配置
-            config = new PropertiesConfiguration("config.properties");
+            config = new PropertiesConfiguration("config/config.properties");
             //文件修改之后自动加载
             config.setReloadingStrategy(new FileChangedReloadingStrategy());
             //配置文件自动保存
