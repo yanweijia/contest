@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Works">
+
+    <resultMap type="entity.Works" id="WorksResult">
+        <id column="wid" jdbcType="INTEGER" property="wid"/>
+        <result column="sid" jdbcType="INTEGER" property="sid"/>
+        <result column="season" jdbcType="VARCHAR" property="season"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="college" jdbcType="VARCHAR" property="college"/>
+        <result column="majorType" jdbcType="VARCHAR" property="majortype"/>
+        <result column="category" jdbcType="VARCHAR" property="category"/>
+        <result column="teacherName" jdbcType="VARCHAR" property="teachername"/>
+        <result column="teacherPhone" jdbcType="VARCHAR" property="teacherphone"/>
+    </resultMap>
+
+    <!--选取符合条件的Works,结果类型为List<Works>-->
+    <select id="queryWorksList" parameterType="java.util.Map" resultMap="WorksResult">
+        SELECT wid,sid,season,name,college,majorType,category,teacherName,teacherPhone FROM works
+            <if test="_parameter!=null">
+                <where>
+                    <if test="works!=null">
+                        <if test="works.wid!=null">
+                            AND wid = #{works.wid}
+                        </if>
+                        <if test="works.sid!=null">
+                            AND sid = #{works.sid}
+                        </if>
+                        <if test="works.season!=null">
+                            AND season = #{works.season}
+                        </if>
+                        <if test="works.name!=null">
+                            AND name LIKE '%' #{works.name} '%'
+                        </if>
+                        <if test="works.college!=null">
+                            AND college LIKE '%' #{works.college} '%'
+                        </if>
+                        <if test="works.majortype!=null">
+                            AND majorType =#{works.majortype}
+                        </if>
+                        <if test="works.category!=null">
+                            AND category = #{works.category}
+                        </if>
+                        <if test="works.teachername!=null">
+                            AND teacherName LIKE '%' #{works.teachername} '%'
+                        </if>
+                        <if test="works.teacherphone!=null">
+                            AND teacherPhone = #{works.teacherphone}
+                        </if>
+                    </if>
+                </where>
+            </if>
+        LIMIT
+            <choose>
+                <when test="pageNum != null ">${(pageNum-1)*perPage}</when>
+                <when test="pageNum == null">0</when>
+            </choose>
+        ,
+            <choose>
+                <when test="perPage!=null">${perPage}</when>
+                <when test="perPage==null">100</when>
+            </choose>
+    </select>
+
+    <!--批量删除指定编号的Works,传入的参数为List<Integer>-->
+    <delete id="deleteBatch" parameterType="java.util.List">
+        DELETE FROM works WHERE wid
+            <choose>
+                <when test="list!=null &amp;&amp; list.size()!=0">
+                    IN
+                    <foreach collection="list" item="item" open="(" close=")" separator=",">
+                        #{item}
+                    </foreach>
+                </when>
+                <when test="list==null || list.size()==0">
+                    =0
+                </when>
+            </choose>
+
+    </delete>
+
+    <!--根据赛季和学校编号获取作品个数,无则传null-->
+    <select id="getCount" resultType="int" parameterType="java.util.Map">
+        SELECT COUNT(*) AS resultCount FROM works
+        <if test="_parameter!=null">
+            <where>
+                <if test="season!=null &amp;&amp; &quot;&quot;.equals(season.trim())">
+                    AND season=#{_parameter.season}
+                </if>
+                <if test="sid!=null">
+                    AND sid=#{_parameter.sid}
+                </if>
+            </where>
+        </if>
+    </select>
+
+
+    <!--插入新的作品信息-->
+    <insert id="newWorks" parameterType="entity.Works" useGeneratedKeys="true" keyProperty="wid" keyColumn="wid">
+        INSERT INTO works (sid,season,name,college,majorType,category,teacherName,teacherPhone)
+            VALUES (
+              #{sid},
+              #{season},
+              #{name},
+              #{college},
+              #{majortype},
+              #{category},
+              #{teachername},
+              #{teacherphone}
+            )
+    </insert>
+
+    <!--更新作品信息-->
+    <update id="updateWorks" parameterType="entity.Works">
+        UPDATE works SET
+            season=#{season},
+            name=#{name},
+            college=#{college},
+            majorType=#{majortype},
+            category=#{category},
+            teacherName=#{teachername},
+            teacherPhone=#{teacherphone}
+        WHERE wid=#{wid}
+    </update>
+
+</mapper>

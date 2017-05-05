@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TeamMember">
+
+    <resultMap type="entity.TeamMember" id="TeamMemberResult">
+        <id column="uid" jdbcType="INTEGER" property="uid"/>
+        <result column="wid" jdbcType="INTEGER" property="wid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="idcard" jdbcType="VARCHAR" property="idcard"/>
+        <result column="college" jdbcType="VARCHAR" property="college"/>
+        <result column="major" jdbcType="VARCHAR" property="major"/>
+        <result column="grade" jdbcType="VARCHAR" property="grade"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="age" jdbcType="INTEGER" property="age"/>
+    </resultMap>
+
+
+    <!--插入一条新的队员信息-->
+    <insert id="newTeamMember" parameterType="entity.TeamMember" useGeneratedKeys="true" keyProperty="mid" keyColumn="mid">
+        INSERT INTO team_member(wid,name,idcard,college,major,grade,email,phone,age)
+            VALUES(
+                #{wid},
+                #{name},
+                #{idcard},
+                #{college},
+                #{major},
+                #{grade},
+                #{email},
+                #{phone},
+                #{age}
+            )
+    </insert>
+
+    <!--更新队员信息-->
+    <update id="updateTeamMember" parameterType="entity.TeamMember">
+        UPDATE team_member SET
+            wid=#{wid},
+            name=#{name},
+            idcard=#{idcard},
+            college=#{college},
+            major=#{major},
+            grade=#{grade},
+            email=#{email},
+            phone=#{phone},
+            age=#{age}
+        WHERE mid=#{mid}
+    </update>
+
+    <!--查询符合条件的TeamMember-->
+    <select id="queryTeamMember" parameterType="java.util.Map" resultMap="TeamMemberResult">
+        SELECT mid,wid,name,idcard,college,major,grade,email,phone FROM team_member
+        <if test="_parameter!=null">
+            <where>
+                <if test="teamMember.mid!=null">
+                    AND mid=#{teamMember.mid}
+                </if>
+                <if test="teamMember.wid!=null">
+                    AND wid=#{teamMember.wid}
+                </if>
+                <if test="teamMember.name!=null &amp;&amp; &quot;&quot;.equals(teamMember.name.trim())">
+                    AND name LIKE '%' #{teamMember.name} '%'
+                </if>
+                <if test="teamMember.idcard!=null &amp;&amp; &quot;&quot;.equals(teamMember.idcard.trim())">
+                    AND idcard LIKE '%' #{teamMember.idcard} '%'
+                </if>
+                <if test="teamMember.college!=null &amp;&amp; &quot;&quot;.equals(teamMember.college.trim())">
+                    AND college LIKE '%' #{teamMember.college} '%'
+                </if>
+                <if test="teamMember.major!=null &amp;&amp; &quot;&quot;.equals(teamMember.major.trim())">
+                    AND major LIKE '%' #{teamMember.major} '%'
+                </if>
+                <if test="teamMember.grade!=null &amp;&amp; &quot;&quot;.equals(teamMember.grade.trim())">
+                    AND grade=#{teamMember.grade}
+                </if>
+                <if test="teamMember.email!=null &amp;&amp; &quot;&quot;.equals(teamMember.email.trim())">
+                    AND email LIKE '%' #{teamMember.email} '%'
+                </if>
+                <if test="teamMember.phone!=null &amp;&amp; &quot;&quot;.equals(teamMember.phone.trim())">
+                    AND phone LIKE '%' #{teamMember.phone} '%'
+                </if>
+                <if test="teamMember.age!=null">
+                    AND age=#{teamMember.age}
+                </if>
+            </where>
+        </if>
+        LIMIT
+        <choose>
+            <when test="pageNum != null ">${(pageNum-1)*perPage}</when>
+            <when test="pageNum == null">0</when>
+        </choose>
+        ,
+        <choose>
+            <when test="perPage!=null">${perPage}</when>
+            <when test="perPage==null">100</when>
+        </choose>
+    </select>
+
+    <!--批量删除队员-->
+    <delete id="deleteBatch" parameterType="java.util.List">
+        DELETE FROM team_member WHERE mid
+        <choose>
+            <when test="list!=null &amp;&amp; list.size()!=0">
+                IN
+                <foreach collection="list" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </when>
+            <when test="list==null || list.size()==0">
+                =0
+            </when>
+        </choose>
+    </delete>
+
+</mapper>

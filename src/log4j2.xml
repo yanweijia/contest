@@ -53,7 +53,22 @@
         </logger>
         <logger name="org.hibernate" level="INFO">
         </logger>
-        <root level="all">
+
+        <logger name="org.apache" level="INFO">
+        </logger>
+
+        <!--过滤掉mybatis的sql语句查询的结果集的显示,若要开启,将level调成TRACE即可-->
+        <logger name="org.apache.ibatis.logging.jdbc" level="DEBUG">
+        </logger>
+
+        <!--过滤掉mybatis其他一些日志-->
+        <logger name="org.apache.ibatis.logging.LogFactory" level="INFO">
+        </logger>
+        <logger name="org.apache.ibatis.datasource" level="INFO">
+        </logger>
+        <logger name="org.apache.ibatis.transaction" level="INFO">
+        </logger>
+        <root level="ALL">
             <appender-ref ref="Console"/>
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>

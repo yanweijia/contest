@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SchoolInfo">
+
+    <resultMap type="entity.SchoolInfo" id="SchoolInfoResult">
+        <id column="sid" jdbcType="INTEGER" property="sid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="uid" jdbcType="INTEGER" property="uid"/>
+    </resultMap>
+
+
+    <select id="querySchoolInfo" parameterType="java.util.Map" resultMap="SchoolInfoResult">
+        SELECT sid,name,uid FROM school_info
+            <if test="name!=null &amp;&amp; &quot;&quot;.equals(name.trim())">
+                WHERE name LIKE '%' #{name} '%'
+            </if>
+        LIMIT
+        <choose>
+            <when test="pageNum != null ">${(pageNum-1)*perPage}</when>
+            <when test="pageNum == null">0</when>
+        </choose>
+        ,
+        <choose>
+            <when test="perPage!=null">${perPage}</when>
+            <when test="perPage==null">100</when>
+        </choose>
+    </select>
+
+    <!--更新学校信息:名称/联系人信息-->
+    <update id="updateSchoolInfo" parameterType="entity.SchoolInfo">
+        UPDATE school_info
+            <set>
+                <if test="name!=null">
+                    name=#{name},
+                </if>
+                <if test="uid!=null">
+                    uid=#{uid},
+                </if>
+            </set>
+        WHERE sid=#{sid}
+    </update>
+
+    <!--批量删除学校信息-->
+    <delete id="deleteBatch" parameterType="java.util.List">
+        DELETE FROM school_info WHERE sid
+        <choose>
+            <when test="list!=null &amp;&amp; list.size()!=0">
+                IN
+                <foreach collection="list" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </when>
+            <when test="list==null || list.size()==0">
+                =0
+            </when>
+        </choose>
+    </delete>
+
+    <!--插入新数据-->
+    <insert id="newSchoolInfo" parameterType="entity.SchoolInfo" useGeneratedKeys="true" keyColumn="sid" keyProperty="sid">
+        INSERT INTO school_info (name,uid)
+            VALUES(
+                #{name,jdbcType=VARCHAR},
+                #{uid,jdbcType=INTEGER}
+            )
+    </insert>
+</mapper>

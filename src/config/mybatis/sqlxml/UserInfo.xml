@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="User">
+
+    <resultMap type="entity.UserInfo" id="UserInfoResult">
+        <id column="uid" jdbcType="INTEGER" property="uid"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="idcard" jdbcType="VARCHAR" property="idcard"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+    </resultMap>
+
+
+    <!--更新用户信息-->
+    <update id="updateUserInfo" parameterType="entity.UserInfo">
+        UPDATE user_info
+            <set>
+                <if test="email!=null">
+                    email=#{email},
+                </if>
+                <if test="phone!=null">
+                    phone=#{phone},
+                </if>
+                <if test="idcard!=null">
+                    idcard=#{idcard},
+                </if>
+                <if test="sex!=null">
+                    sex=#{sex},
+                </if>
+                <if test="name!=null">
+                    name=#{name},
+                </if>
+            </set>
+        WHERE uid=#{uid}
+    </update>
+
+    <!--插入新数据-->
+    <insert id="newUserInfo" parameterType="entity.UserInfo">
+        INSERT INTO user_info (uid,email,phone,idcard,sex,name)
+            VALUES(
+                #{uid},
+                #{email},
+                #{phone},
+                #{idcard},
+                #{sex},
+                #{name}
+            )
+    </insert>
+
+</mapper>
