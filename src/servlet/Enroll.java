@@ -64,8 +64,8 @@ public class Enroll extends HttpServlet {
             }catch(Exception e){
                 sqlSession.rollback();
                 NetUtils.writeResultToBrowser(out,false,"提交报名信息失败,详细信息:" + e.getMessage());
-            }finally {
                 sqlSession.close();
+                return;
             }
             NetUtils.writeResultToBrowser(out,true,"报名信息提交成功!");
             return;
@@ -85,8 +85,8 @@ public class Enroll extends HttpServlet {
             }catch(Exception e){
                 sqlSession.rollback();
                 NetUtils.writeResultToBrowser(out,false,"更新报名信息失败,详细信息:" + e.getMessage());
-            }finally {
                 sqlSession.close();
+                return;
             }
             NetUtils.writeResultToBrowser(out,true,"更新作品信息成功!");
             return;

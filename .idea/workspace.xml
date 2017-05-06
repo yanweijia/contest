@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/DBAccess.java" afterPath="$PROJECT_DIR$/src/db/DBAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/Enroll.java" afterPath="$PROJECT_DIR$/src/servlet/Enroll.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,21 +55,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Enroll.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Enroll.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/servlet/Enroll.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="513">
+              <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBAccess.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBAccess.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+            <state relative-caret-position="447">
+              <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
               <folding>
                 <element signature="e#1814#1815#0" expanded="true" />
                 <element signature="e#1860#1861#0" expanded="true" />
@@ -218,12 +218,12 @@
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/utils/NetUtils.java" />
         <option value="$PROJECT_DIR$/src/servlet/PostNotice.java" />
-        <option value="$PROJECT_DIR$/src/servlet/Enroll.java" />
         <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
         <option value="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
         <option value="$PROJECT_DIR$/src/dao/TeamMemberDao.java" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
         <option value="$PROJECT_DIR$/src/db/DBAccess.java" />
+        <option value="$PROJECT_DIR$/src/servlet/Enroll.java" />
       </list>
     </option>
   </component>
@@ -1089,7 +1089,7 @@
       <workItem from="1493717325916" duration="26059000" />
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
-      <workItem from="1494075573610" duration="17281000" />
+      <workItem from="1494075573610" duration="17403000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1210,11 +1210,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494092866400</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="DBAccess相关异常的捕获">
+      <created>1494093306764</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1494093306764</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169343000" />
+    <option name="totallyTimeSpent" value="169465000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1237,7 +1244,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49519232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.122329056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.28308025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09002169" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27006507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18215811" sideWeight="0.49436393" order="3" side_tool="false" content_ui="combo" />
@@ -1306,7 +1313,8 @@
     <MESSAGE value="1.报名表信息的接受以及存储&#10;2.TeamMemberDao和WorksDao的update方法增加一个参数SqlSession,方便在外部commit和rollback所做的更改,保证作品信息和队员信息同时提交" />
     <MESSAGE value="DBAccess对相关sql的执行进行了异常捕获,尽量保证sql异常不会输出到前端." />
     <MESSAGE value="Mybatis报名相关异常的抛出" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mybatis报名相关异常的抛出" />
+    <MESSAGE value="DBAccess相关异常的捕获" />
+    <option name="LAST_COMMIT_MESSAGE" value="DBAccess相关异常的捕获" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1720,14 +1728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/Enroll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/TeamMemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1740,8 +1740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+        <state relative-caret-position="447">
+          <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
           <folding>
             <element signature="e#1814#1815#0" expanded="true" />
             <element signature="e#1860#1861#0" expanded="true" />
@@ -1750,6 +1750,14 @@
             <element signature="e#3174#3175#0" expanded="true" />
             <element signature="e#3219#3220#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/Enroll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
