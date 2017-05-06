@@ -24,12 +24,12 @@ function ajaxSubmit(){
         return;
     }
     $.post('/enroll.action', $("#form_enrollment").serialize(), function(data) {
-        if(data.result){
+        var jsonResult = eval('('+data+')');
+        if(jsonResult.result){
             alert('提交成功');
         }else{
-            alert(data.reason);
+            alert(jsonResult.reason);
         }
-        alert(data);
     });
 }
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/Enroll.java" afterPath="$PROJECT_DIR$/src/servlet/Enroll.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/enrollment/js/enrollment.js" afterPath="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +55,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Enroll.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Enroll.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/Enroll.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
@@ -116,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enrollment.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="enrollment.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/enrollment/js/enrollment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -218,12 +218,12 @@
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/utils/NetUtils.java" />
         <option value="$PROJECT_DIR$/src/servlet/PostNotice.java" />
-        <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
         <option value="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
         <option value="$PROJECT_DIR$/src/dao/TeamMemberDao.java" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
         <option value="$PROJECT_DIR$/src/db/DBAccess.java" />
         <option value="$PROJECT_DIR$/src/servlet/Enroll.java" />
+        <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
       </list>
     </option>
   </component>
@@ -1089,7 +1089,7 @@
       <workItem from="1493717325916" duration="26059000" />
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
-      <workItem from="1494075573610" duration="17403000" />
+      <workItem from="1494075573610" duration="18493000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1217,11 +1217,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494093306764</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修改:Enroll.action输出错误信息后没有及时返回">
+      <created>1494093453036</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1494093453036</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169465000" />
+    <option name="totallyTimeSpent" value="170555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1243,7 +1250,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49519232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.122329056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.28308025" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.16160521" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27006507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1321,8 @@
     <MESSAGE value="DBAccess对相关sql的执行进行了异常捕获,尽量保证sql异常不会输出到前端." />
     <MESSAGE value="Mybatis报名相关异常的抛出" />
     <MESSAGE value="DBAccess相关异常的捕获" />
-    <option name="LAST_COMMIT_MESSAGE" value="DBAccess相关异常的捕获" />
+    <MESSAGE value="修改:Enroll.action输出错误信息后没有及时返回" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改:Enroll.action输出错误信息后没有及时返回" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1692,14 +1700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/enrollment/js/enrollment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/enrollment/enrollment_table.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -1757,6 +1757,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/enrollment/js/enrollment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding />
         </state>
       </provider>
