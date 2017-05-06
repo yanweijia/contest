@@ -21,7 +21,7 @@ import java.util.Map;
  *  {result:boolean
  *  reason:String}
  */
-@WebServlet(name="PostNotice",value="/postNotice")
+@WebServlet(name="PostNotice",value="/postNotice.action")
 public class PostNotice extends HttpServlet {
     private static final Logger logger = LogManager.getLogger(PostNotice.class);
 

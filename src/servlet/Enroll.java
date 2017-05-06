@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by weijia on 2017-05-04.
  */
-@WebServlet(name = "Enroll",value="/enroll")
+@WebServlet(name = "Enroll",value="/enroll.action")
 public class Enroll extends HttpServlet {
     private static final Logger logger = LogManager.getLogger(Enroll.class);
 

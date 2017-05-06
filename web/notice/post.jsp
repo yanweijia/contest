@@ -60,4 +60,4 @@
 
 
 <%--用来提交信息的隐藏表单--%>
-<form id="postNoticeForm" action="<%=NetUtils.getBasePath(request)%>postNotice" method="POST" target="_blank"style=" display:none"></form>
+<form id="postNoticeForm" action="<%=NetUtils.getBasePath(request)%>postNotice.action" method="POST" target="_blank"style=" display:none"></form>
