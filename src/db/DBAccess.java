@@ -49,10 +49,16 @@ public class DBAccess {
     public static int insert(String s,Object o){
         int effectedRows = 0;
         SqlSession sqlSession = null;
-        sqlSession = DBAccess.getSqlSession();
-        effectedRows = sqlSession.insert(s,o);
-        sqlSession.commit();
-        sqlSession.close();
+        try {
+            sqlSession = DBAccess.getSqlSession();
+            effectedRows = sqlSession.insert(s, o);
+            sqlSession.commit();
+        }catch(Exception e){
+            logger.error("sql插入出错,详细信息:" ,e);
+            sqlSession.rollback();
+        }finally {
+            sqlSession.close();
+        }
         return effectedRows;
     }
 
@@ -66,10 +72,16 @@ public class DBAccess {
     public static int update(String s,Object o){
         int effectedRows = 0;
         SqlSession sqlSession = null;
-        sqlSession = DBAccess.getSqlSession();
-        effectedRows = sqlSession.update(s,o);
-        sqlSession.commit();
-        sqlSession.close();
+        try {
+            sqlSession = DBAccess.getSqlSession();
+            effectedRows = sqlSession.update(s, o);
+            sqlSession.commit();
+        }catch(Exception e){
+            logger.error("sql更新出错,详细信息" , e);
+            sqlSession.rollback();
+        }finally {
+            sqlSession.close();
+        }
         return effectedRows;
     }
 
@@ -82,10 +94,16 @@ public class DBAccess {
     public static int delete(String s,Object o){
         int effectedRows = 0;
         SqlSession sqlSession = null;
-        sqlSession = DBAccess.getSqlSession();
-        effectedRows = sqlSession.delete(s,o);
-        sqlSession.commit();
-        sqlSession.close();
+        try {
+            sqlSession = DBAccess.getSqlSession();
+            effectedRows = sqlSession.delete(s, o);
+            sqlSession.commit();
+        }catch(Exception e){
+            logger.error("sql删除出错,详细信息为",e);
+            sqlSession.rollback();
+        }finally {
+            sqlSession.close();
+        }
         return effectedRows;
     }
 
@@ -96,11 +114,16 @@ public class DBAccess {
      * @return
      */
     public static List selectList(String s,Object o){
-        List list;
+        List list = null;
         SqlSession sqlSession = null;
-        sqlSession = DBAccess.getSqlSession();
-        list = sqlSession.selectList(s,o);
-        sqlSession.close();
+        try {
+            sqlSession = DBAccess.getSqlSession();
+            list = sqlSession.selectList(s, o);
+        }catch(Exception e){
+            logger.error("sql执行出错,无法selectList",e);
+        }finally {
+            sqlSession.close();
+        }
         return list;
     }
 }
