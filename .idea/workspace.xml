@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/TeamMemberDao.java" afterPath="$PROJECT_DIR$/src/dao/TeamMemberDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/WorksDao.java" afterPath="$PROJECT_DIR$/src/dao/WorksDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" afterPath="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/enrollment/js/enrollment.js" afterPath="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db/DBAccess.java" afterPath="$PROJECT_DIR$/src/db/DBAccess.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,12 +65,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorksDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dao/WorksDao.java">
+      <file leaf-file-name="DBAccess.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="252" column="89" lean-forward="false" selection-start-line="252" selection-start-column="89" selection-end-line="252" selection-end-column="89" />
-              <folding />
+            <state relative-caret-position="409">
+              <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+              <folding>
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#3174#3175#0" expanded="true" />
+                <element signature="e#3219#3220#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,8 +85,8 @@
       <file leaf-file-name="TeamMemberDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/TeamMemberDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="109" column="104" lean-forward="false" selection-start-line="109" selection-start-column="104" selection-end-line="109" selection-end-column="104" />
+            <state relative-caret-position="209">
+              <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -215,11 +219,11 @@
         <option value="$PROJECT_DIR$/src/utils/NetUtils.java" />
         <option value="$PROJECT_DIR$/src/servlet/PostNotice.java" />
         <option value="$PROJECT_DIR$/src/servlet/Enroll.java" />
-        <option value="$PROJECT_DIR$/src/db/DBAccess.java" />
         <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
         <option value="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
         <option value="$PROJECT_DIR$/src/dao/TeamMemberDao.java" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
+        <option value="$PROJECT_DIR$/src/db/DBAccess.java" />
       </list>
     </option>
   </component>
@@ -390,6 +394,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1089,7 @@
       <workItem from="1493717325916" duration="26059000" />
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
-      <workItem from="1494075573610" duration="16825000" />
+      <workItem from="1494075573610" duration="17281000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1181,11 +1203,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494088498676</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Mybatis报名相关异常的抛出">
+      <created>1494092866400</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494092866400</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168887000" />
+    <option name="totallyTimeSpent" value="169343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1276,7 +1305,8 @@
     <MESSAGE value="1.DBAccess.java 访问数据库的类完成&#10;2.数据库对应实体类的Dao层编写完成,对应sql语句xml也编写完成,可以使用" />
     <MESSAGE value="1.报名表信息的接受以及存储&#10;2.TeamMemberDao和WorksDao的update方法增加一个参数SqlSession,方便在外部commit和rollback所做的更改,保证作品信息和队员信息同时提交" />
     <MESSAGE value="DBAccess对相关sql的执行进行了异常捕获,尽量保证sql异常不会输出到前端." />
-    <option name="LAST_COMMIT_MESSAGE" value="DBAccess对相关sql的执行进行了异常捕获,尽量保证sql异常不会输出到前端." />
+    <MESSAGE value="Mybatis报名相关异常的抛出" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mybatis报名相关异常的抛出" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1638,16 +1668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="65" column="7" lean-forward="true" selection-start-line="65" selection-start-column="7" selection-end-line="65" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/plug-in/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1692,13 +1712,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/TeamMemberDao.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/WorksDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="109" column="104" lean-forward="false" selection-start-line="109" selection-start-column="104" selection-end-line="109" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="440">
+          <caret line="260" column="20" lean-forward="true" selection-start-line="260" selection-start-column="20" selection-end-line="260" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1710,11 +1728,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/WorksDao.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/TeamMemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="252" column="89" lean-forward="false" selection-start-line="252" selection-start-column="89" selection-end-line="252" selection-end-column="89" />
-          <folding />
+        <state relative-caret-position="209">
+          <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+          <folding>
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#3174#3175#0" expanded="true" />
+            <element signature="e#3219#3220#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

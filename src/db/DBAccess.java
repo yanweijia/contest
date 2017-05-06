@@ -51,7 +51,7 @@ public class DBAccess {
         SqlSession sqlSession = null;
         try {
             sqlSession = DBAccess.getSqlSession();
-            effectedRows = sqlSession.insert(s, o);
+            effectedRows = insert(sqlSession,s,o);
             sqlSession.commit();
         }catch(Exception e){
             logger.error("sql插入出错,详细信息:" ,e);
@@ -61,7 +61,9 @@ public class DBAccess {
         }
         return effectedRows;
     }
-
+    public static int insert(SqlSession sqlSession,String s,Object o) {
+        return sqlSession.insert(s, o);
+    }
 
     /**
      * 更新数据
@@ -74,7 +76,7 @@ public class DBAccess {
         SqlSession sqlSession = null;
         try {
             sqlSession = DBAccess.getSqlSession();
-            effectedRows = sqlSession.update(s, o);
+            effectedRows = update(sqlSession,s,o);
             sqlSession.commit();
         }catch(Exception e){
             logger.error("sql更新出错,详细信息" , e);
@@ -84,7 +86,9 @@ public class DBAccess {
         }
         return effectedRows;
     }
-
+    public static int update(SqlSession sqlSession,String s,Object o) {
+        return sqlSession.update(s,o);
+    }
     /**
      * 删除数据
      * @param s xml中对应sql语句名
@@ -96,7 +100,7 @@ public class DBAccess {
         SqlSession sqlSession = null;
         try {
             sqlSession = DBAccess.getSqlSession();
-            effectedRows = sqlSession.delete(s, o);
+            effectedRows = delete(sqlSession,s,o);
             sqlSession.commit();
         }catch(Exception e){
             logger.error("sql删除出错,详细信息为",e);
@@ -106,7 +110,9 @@ public class DBAccess {
         }
         return effectedRows;
     }
-
+    public static int delete(SqlSession sqlSession,String s,Object o) {
+        return sqlSession.delete(s,o);
+    }
     /**
      * 查询信息
      * @param s xml中对应sql语句名
@@ -118,7 +124,7 @@ public class DBAccess {
         SqlSession sqlSession = null;
         try {
             sqlSession = DBAccess.getSqlSession();
-            list = sqlSession.selectList(s, o);
+            list = selectList(sqlSession,s,o);
         }catch(Exception e){
             logger.error("sql执行出错,无法selectList",e);
         }finally {
@@ -126,4 +132,8 @@ public class DBAccess {
         }
         return list;
     }
+    public static List selectList(SqlSession sqlSession,String s,Object o) throws Exception{
+        return sqlSession.selectList(s,o);
+    }
+
 }
