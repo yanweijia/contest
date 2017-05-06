@@ -190,6 +190,20 @@ public class WorksDao {
 
     /**
      * 插入一条新Works
+     * @param works 作品信息
+     * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
+     * @return 插入的新works编号
+     */
+    public static int newWorks(Works works,SqlSession sqlSession){
+        if(works!=null){
+            sqlSession.insert("Works.newWorks",works);
+        }
+        return Integer.parseInt(""+works.getWid());
+    }
+
+
+    /**
+     * 插入一条新Works
      * @param sid 学校编号
      * @param season 赛季
      * @param name 作品名称
@@ -228,6 +242,16 @@ public class WorksDao {
             sqlSession.close();
         }
         return effectedRows!=0;
+    }
+
+    /**
+     * 更新Works
+     * @param works 作品信息
+     * @param sqlSession  sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
+     * @return 是否更新成功
+     */
+    public static boolean updateWorks(Works works,SqlSession sqlSession){
+        return sqlSession.update("Works.updateWorks",works) != 0;
     }
 
     /**

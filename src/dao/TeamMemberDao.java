@@ -2,6 +2,7 @@ package dao;
 
 import db.DBAccess;
 import entity.TeamMember;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -52,6 +53,16 @@ public class TeamMemberDao {
         return Integer.parseInt(""+teamMember.getMid());
     }
 
+    /**
+     * 新增队员信息
+     * @param teamMember 队员信息
+     * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
+     * @return
+     */
+    public static int newTeamMember(TeamMember teamMember,SqlSession sqlSession){
+        sqlSession.insert("TeamMember.newTeamMember",teamMember);
+        return Integer.parseInt(""+teamMember.getMid());
+    }
 
     /**
      * 更新队员信息
@@ -89,6 +100,15 @@ public class TeamMemberDao {
         return DBAccess.update("TeamMember.updateTeamMember",teamMember)!=0;
     }
 
+    /**
+     * 更新队员
+     * @param teamMember 队员信息封装
+     * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
+     * @return
+     */
+    public static boolean updateTeamMember(TeamMember teamMember,SqlSession sqlSession){
+        return sqlSession.update("TeamMember.updateTeamMember",teamMember)!=0;
+    }
 
     /**
      * 查询符合条件的队员

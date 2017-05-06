@@ -16,6 +16,20 @@ import java.util.Map;
 public class UserDao {
     private static final Logger logger = LogManager.getLogger(UserDao.class);
 
+    /**
+     * 查找指定用户类型
+     * @param uid 用户编号
+     * @return 用户不存在则返回null
+     */
+    public static String getUserType(int uid){
+        User user = new User((long)uid,null,null,null);
+        List<User> list = queryUsers(user,10,1);
+        if(list.size() == 0){
+            return null;
+        }else{
+            return list.get(0).getType();
+        }
+    }
 
     /**
      * 根据用户类型查询符合条件的用户

@@ -1,12 +1,31 @@
 package utils;
 
+import com.google.gson.Gson;
+
 import javax.servlet.http.HttpServletRequest;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by weijia on 2017-03-11.
  */
 public class NetUtils {
 
+
+    /**
+     * 将结果写到输出流
+     * @param out 输出流
+     * @param result 结果标志
+     * @param reason 原因
+     */
+    public static void writeResultToBrowser(PrintWriter out, boolean result, String reason){
+        Map<String,Object> map = new HashMap<>();
+        Gson gson = new Gson();
+        map.put("result",result);
+        map.put("reason",reason);
+        out.println(gson.toJson(map,Map.class));
+    }
 
     /**
      * 获取对方真实IP,并非最准确但不会因为反向代理读错<br/>

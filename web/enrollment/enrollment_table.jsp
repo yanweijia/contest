@@ -12,7 +12,7 @@
 <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
 
 
-<form id="form_enrollment" name="form_enrollment" action="enroll.action" method="GET" style="width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
+<form id="form_enrollment" name="form_enrollment" action="<%=NetUtils.getBasePath(request) %>enroll.action" method="GET" style="width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
     <input type="hidden" name="method" value="<%="new" %>" required readonly/>
     <input type="hidden" name="season" value="2017" required readonly/>
     <table border="1" cellspacing="0px" bordercolor="gray" id="table_enrollment">
@@ -140,6 +140,10 @@
             <tr style=";height:40px">
                 <td rowspan="4" style="">
                     参赛队员信息<span style="color:red;">*</span>
+                    <label for="input_studentChecked2" style="display:none;">
+                        <input type="checkbox" name="studentChecked1" id="input_studentChecked1" value="studentChecked1" checked="checked"/>
+                        队员2
+                    </label>
                     <input type="hidden" name="studentMid1" id="input_studentMid1" value="0" placeholder="参赛队员编号,当更新报名表的时候可以借此字段将参赛队员信息更新到数据库中" required/>
                 </td>
                 <td style="text-align:right;">
