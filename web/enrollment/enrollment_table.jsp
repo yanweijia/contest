@@ -128,7 +128,7 @@
                     联系电话
                 </td>
                 <td style="">
-                    <input type="text" name="teacherPhone" id="input_teacherPhone" maxlength="12" minlength="11" required/>
+                    <input type="text" name="teacherPhone" id="input_teacherPhone" maxlength="11" minlength="11" required/>
                 </td>
             </tr>
             <tr style=";height:40px">
@@ -203,7 +203,7 @@
                     联系电话
                 </td>
                 <td style="">
-                    <input type="tel" name="studentPhone1" id="input_studentPhone1" minlength="11" maxlength="12" required/>
+                    <input type="tel" name="studentPhone1" id="input_studentPhone1" minlength="11" maxlength="11" required/>
                 </td>
             </tr>
 
@@ -275,7 +275,7 @@
                     联系电话
                 </td>
                 <td style="">
-                    <input type="tel" name="studentPhone2" id="input_studentPhone2" minlength="11" maxlength="12" class="student2" required/>
+                    <input type="tel" name="studentPhone2" id="input_studentPhone2" minlength="11" maxlength="11" class="student2" required/>
                 </td>
             </tr>
 
@@ -347,15 +347,18 @@
                     联系电话
                 </td>
                 <td style="">
-                    <input type="tel" name="studentPhone3" id="input_studentPhone3" minlength="11" maxlength="12" class="student3" required/>
+                    <input type="tel" name="studentPhone3" id="input_studentPhone3" minlength="11" maxlength="11" class="student3" required/>
                 </td>
             </tr>
         </tbody>
     </table>
     <div style="width:100%;align-content: center;">
-        <span style="width:50%;"><input type="submit" class="submitbtn" value="提交" /></span>
 
-        <span style="width:50%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
+        <span style="width:33%"><input type="button" value="手动提交" onclick="ajaxSubmit();"/></span>
+
+        <span style="width:33%;"><input type="submit" class="submitbtn" value="提交" /></span>
+
+        <span style="width:33%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
     </div>
 
 </form>

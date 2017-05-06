@@ -194,7 +194,7 @@ public class WorksDao {
      * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
      * @return 插入的新works编号
      */
-    public static int newWorks(Works works,SqlSession sqlSession){
+    public static int newWorks(Works works,SqlSession sqlSession) throws Exception{
         if(works!=null){
             sqlSession.insert("Works.newWorks",works);
         }
@@ -250,7 +250,7 @@ public class WorksDao {
      * @param sqlSession  sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
      * @return 是否更新成功
      */
-    public static boolean updateWorks(Works works,SqlSession sqlSession){
+    public static boolean updateWorks(Works works,SqlSession sqlSession) throws Exception{
         return sqlSession.update("Works.updateWorks",works) != 0;
     }
 

@@ -2,6 +2,7 @@ package dao;
 
 import db.DBAccess;
 import entity.TeamMember;
+import org.apache.ibatis.datasource.DataSourceException;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -59,7 +60,7 @@ public class TeamMemberDao {
      * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
      * @return
      */
-    public static int newTeamMember(TeamMember teamMember,SqlSession sqlSession){
+    public static int newTeamMember(TeamMember teamMember,SqlSession sqlSession) throws Exception{
         sqlSession.insert("TeamMember.newTeamMember",teamMember);
         return Integer.parseInt(""+teamMember.getMid());
     }
@@ -106,7 +107,7 @@ public class TeamMemberDao {
      * @param sqlSession sqlSession,可以主要插入作品信息和队员信息时可以有事务一致性.
      * @return
      */
-    public static boolean updateTeamMember(TeamMember teamMember,SqlSession sqlSession){
+    public static boolean updateTeamMember(TeamMember teamMember,SqlSession sqlSession) throws Exception{
         return sqlSession.update("TeamMember.updateTeamMember",teamMember)!=0;
     }
 

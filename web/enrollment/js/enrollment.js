@@ -18,6 +18,24 @@ $(".student3").attr("disabled","disabled");
 $("#table_enrollment :input[type!=radio][type!=checkbox]").css("width","100%");
 
 
+
+function ajaxSubmit(){
+    if(!checkBeforeSubmit()){
+        return;
+    }
+    $.post('/enroll.action', $("#form_enrollment").serialize(), function(data) {
+        if(data.result){
+            alert('提交成功');
+        }else{
+            alert(data.reason);
+        }
+        alert(data);
+    });
+}
+
+
+
+
 /**
  * 提交前进行表单验证
  */
