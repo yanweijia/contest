@@ -3,6 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errorPage/404.jsp</location>
+    </error-page>
+
+
+
     <!--网站编码过滤器,默认UTF-8编码,跟JSP页面相同-->
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
