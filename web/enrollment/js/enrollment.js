@@ -18,7 +18,9 @@ $(".student3").attr("disabled","disabled");
 $("#table_enrollment :input[type!=radio][type!=checkbox]").css("width","100%");
 
 
-
+/**
+ * 用ajax的方法提交报名信息,并显示结果.
+ */
 function ajaxSubmit(){
     if(!checkBeforeSubmit()){
         return;
