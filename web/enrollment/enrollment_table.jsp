@@ -5,7 +5,7 @@
   Time: 16:19
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>enrollment/css/enrollment.css" >
+<link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>resource/css/enrollment.css" >
 
 
 <%--TODO: JQuery包,后期集成的时候记得去除--%>
@@ -364,4 +364,4 @@
 </form>
 
 <%--表单验证js--%>
-<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>enrollment/js/enrollment.js"></script>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/enrollment.js"></script>

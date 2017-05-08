@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/errorPage/images/404banner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/errorPage/images/404bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/errorPage/404.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/errorPage/css/404style.css" />
+    <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="1.引用nivo-slider首页图片轮播&#10;2.改动目录结构,将postNotice和">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/images/img1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/images/img2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/images/img3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/images/img4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/themes/default/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/themes/default/bullets.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/themes/default/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/jquery-1.9.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/jquery.nivo.slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/plug-in/nivo-slider/themes/default/default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resource/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resource/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" afterPath="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notice/post.jsp" afterPath="$PROJECT_DIR$/web/notice/post.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notice/viewNotice.jsp" afterPath="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/enrollment/css/enrollment.css" afterPath="$PROJECT_DIR$/web/resource/css/enrollment.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/enrollment/js/enrollment.js" afterPath="$PROJECT_DIR$/web/resource/js/enrollment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/base64.js" afterPath="$PROJECT_DIR$/web/resource/js/base64.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/md5.js" afterPath="$PROJECT_DIR$/web/resource/js/md5.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/notice/css/post.css" afterPath="$PROJECT_DIR$/web/resource/css/post.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/notice/css/viewNotice.css" afterPath="$PROJECT_DIR$/web/resource/css/viewNotice.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/notice/js/post.js" afterPath="$PROJECT_DIR$/web/resource/js/post.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +78,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="enrollment.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/enrollment/js/enrollment.js">
+      <file leaf-file-name="enrollment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/resource/js/enrollment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="57">
+              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enrollment_table.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/enrollment/enrollment_table.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -76,9 +115,9 @@
       <list>
         <option value="HTML File" />
         <option value="Jsp File" />
+        <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,6 +136,7 @@
       <find>major</find>
       <find>getJSON</find>
       <find>phone</find>
+      <find>post.css</find>
     </findStrings>
     <replaceStrings>
       <replace>long</replace>
@@ -119,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/notice/list.jsp" />
-        <option value="$PROJECT_DIR$/web/plug-in/ueditor/dialogs/link/link.html" />
-        <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/highcharts/modules/canvas-tools.src.js" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/highcharts/modules/map.src.js" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/highcharts/modules/data.src.js" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/highcharts/highcharts.src.js" />
@@ -132,7 +169,6 @@
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/webuploader/webuploader.html5only.js" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/webuploader/webuploader.withoutimage.js" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/third-party/webuploader/webuploader.js" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.css" />
         <option value="$PROJECT_DIR$/web/enrollment/css/enrollment.css" />
         <option value="$PROJECT_DIR$/src/servlet/postNotice.java" />
@@ -157,11 +193,9 @@
         <option value="$PROJECT_DIR$/src/test/test.java" />
         <option value="$PROJECT_DIR$/src/dao/SchoolInfoDao.java" />
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/TeamMember.xml" />
-        <option value="$PROJECT_DIR$/web/notice/post.jsp" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/utils/NetUtils.java" />
         <option value="$PROJECT_DIR$/src/servlet/PostNotice.java" />
-        <option value="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
         <option value="$PROJECT_DIR$/src/dao/TeamMemberDao.java" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
         <option value="$PROJECT_DIR$/src/db/DBAccess.java" />
@@ -169,7 +203,13 @@
         <option value="$PROJECT_DIR$/web/enrollment/js/enrollment.js" />
         <option value="$PROJECT_DIR$/web/errorPage/404.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/resource/js/index.js" />
         <option value="$PROJECT_DIR$/web/errorPage/404.jsp" />
+        <option value="$PROJECT_DIR$/web/notice/post.jsp" />
+        <option value="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/resource/css/index.css" />
+        <option value="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" />
       </list>
     </option>
   </component>
@@ -190,7 +230,7 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
@@ -253,7 +293,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,7 +315,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="errorPage" />
+              <option name="myItemId" value="resource" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plug-in" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enrollment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,18 +420,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\workspace_idea\contest\web\plug-in\nivo-slider" />
+      <recent name="I:\workspace_idea\contest\web\resource\js\nivo-slider" />
+      <recent name="I:\workspace_idea\contest\web\resource\css\nivo-slider" />
       <recent name="I:\workspace_idea\contest\web\errorPage" />
       <recent name="I:\workspace_idea\contest\src\config\mybatis\sqlxml" />
-      <recent name="I:\workspace_idea\contest\web\WEB-INF\lib" />
-      <recent name="I:\workspace_idea\contest\src" />
-      <recent name="I:\workspace_idea\contest\src\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\workspace_idea\contest\web\resource\css" />
+      <recent name="I:\workspace_idea\contest\web\resource\js" />
+      <recent name="I:\workspace_idea\contest\web\plug-in\nivo-slider\images" />
+      <recent name="I:\workspace_idea\contest\web\resource\css\nivo-slider\default" />
       <recent name="I:\workspace_idea\contest\web\errorPage" />
-      <recent name="I:\workspace_idea\contest\src\config\mybatis" />
-      <recent name="I:\workspace_idea\contest\web\WEB-INF\lib" />
-      <recent name="I:\workspace_idea\contest\src\config" />
-      <recent name="I:\workspace_idea\contest\web\plug-in" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -931,7 +1015,7 @@
       <workItem from="1493717325916" duration="26059000" />
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
-      <workItem from="1494075573610" duration="24187000" />
+      <workItem from="1494075573610" duration="30599000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1087,11 +1171,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494142275714</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="404页面">
+      <created>1494151350962</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494151350962</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176249000" />
+    <option name="totallyTimeSpent" value="182661000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1103,7 +1194,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.24295011" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1113,13 +1204,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49519232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.122329056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.30802602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27006507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.27440348" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.27006507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23237179" sideWeight="0.49436393" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18055555" sideWeight="0.49436393" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4154013" sideWeight="0.5048077" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.26138827" sideWeight="0.5048077" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.079594016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.12553419" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1571" y="82" width="275" height="922" />
@@ -1188,7 +1279,8 @@
     <MESSAGE value="enrollment.js 手动提交返回json数据并弹出提示框" />
     <MESSAGE value="enrollment.js ajaxSubmit写方法文档" />
     <MESSAGE value="项目相关文档一起放入git" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目相关文档一起放入git" />
+    <MESSAGE value="404页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="404页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1201,67 +1293,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/META-INF/LICENSE">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/META-INF/maven/ognl/ognl/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/META-INF/maven/ognl/ognl/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1615">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/org/apache/ibatis/lang/UsesJava8.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/org/apache/ibatis/jdbc/AbstractSQL.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/mybatis-3.4.4.jar!/org/apache/ibatis/session/SqlSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/dbcp.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="79" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b8e6bc4/dbce8d7b-4481-4d71-9b74-77ca35bd8cf1/contest.works">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1448,13 +1479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/notice/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1511,14 +1535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/notice/post.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/plug-in/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1543,26 +1559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/enrollment/enrollment_table.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="355" column="0" lean-forward="true" selection-start-line="355" selection-start-column="0" selection-end-line="355" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#col#0;n#colgroup#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#col#1;n#colgroup#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#col#2;n#colgroup#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#col#3;n#colgroup#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#col#4;n#colgroup#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#td#0;n#tr#7;n#tbody#0;n#table#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/TeamMemberDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1578,12 +1574,12 @@
         <state relative-caret-position="447">
           <caret line="123" column="37" lean-forward="true" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
           <folding>
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1860#1861#0" expanded="true" />
-            <element signature="e#2493#2494#0" expanded="true" />
-            <element signature="e#2538#2539#0" expanded="true" />
-            <element signature="e#3174#3175#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="false" />
+            <element signature="e#1860#1861#0" expanded="false" />
+            <element signature="e#2493#2494#0" expanded="false" />
+            <element signature="e#2538#2539#0" expanded="false" />
+            <element signature="e#3174#3175#0" expanded="false" />
+            <element signature="e#3219#3220#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1604,22 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/errorPage/404.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -1628,10 +1608,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/enrollment/js/enrollment.js">
+    <entry file="file://$PROJECT_DIR$/web/resource/js/nivo-slider/jquery.nivo.slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/CharacterEncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plug-in/nivo-slider/images/nemo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resource/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plug-in/nivo-slider/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/errorPage/404.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="73" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/notice/viewNotice.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/notice/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/notice/post.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resource/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/plug-in/nivo-slider/images/img2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resource/js/enrollment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/enrollment/enrollment_table.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="72" lean-forward="false" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
           <folding />
         </state>
       </provider>

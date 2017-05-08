@@ -15,9 +15,9 @@
 <script type="text/javascript" charset="utf-8" src="<%=NetUtils.getBasePath(request) %>plug-in/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 
-<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>js/base64.js"></script>   <%--base64加密--%>
-<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>notice/js/post.js"></script>
-<link href="<%=NetUtils.getBasePath(request) %>notice/css/post.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/base64.js"></script>   <%--base64加密--%>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/post.js"></script>
+<link href="<%=NetUtils.getBasePath(request) %>resource/css/post.css" rel="stylesheet" type="text/css" />
 
 
 <%--TODO: JQuery包,后期集成的时候记得去除--%>

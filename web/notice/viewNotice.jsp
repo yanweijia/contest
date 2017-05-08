@@ -30,7 +30,7 @@
     String type = notice.getType();
     String content = notice.getContent();
 %>
-<link href="<%=NetUtils.getBasePath(request) %>notice/css/viewNotice.css" rel="stylesheet" type="text/css" />
+<link href="<%=NetUtils.getBasePath(request) %>resource/css/viewNotice.css" rel="stylesheet" type="text/css" />
 <div>
     <h3 class='notice-title center' style="font-weight:bold;">
         <%=noticeTitle %>

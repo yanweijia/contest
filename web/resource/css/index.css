@@ -1,0 +1,9 @@
+body{
+    margin:0 auto;
+    text-align:center;
+}
+.slider-wrapper {
+    position:relative;
+    width: 1000px;
+    margin:0 auto;
+}
