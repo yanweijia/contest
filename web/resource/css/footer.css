@@ -1,0 +1,27 @@
+.footer{
+    padding:10px 0;
+    position:relative;
+    z-index:3000;
+    width:100%;
+    display:block;
+    background-color:#8ECFD5;
+}
+.foot{
+    margin:0 auto;
+    max-width:1000px;
+    display:block;
+    text-align:center;
+}
+.foot p{
+    color:white;
+    font-weight:bold;
+}
+.fa-heart{
+    color:#FD6F69;
+}
+.foot p a{
+    color:white;
+}
+.foot p a:hover{
+    color:white;
+}

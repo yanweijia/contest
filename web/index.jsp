@@ -14,24 +14,30 @@
 
     <jsp:include page="plug-in/paper-kit-style/css.jsp"/>
 
+    <link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>resource/css/index.css" type="text/css" />
+
     <%--引用nivo-slider图片轮播--%>
     <link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
 </head>
 <body>
+    <%--页面顶部通用导航条--%>
     <jsp:include page="page/header.jsp"/>
 
-    <div id="wrapper">
-        <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
-                <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img1.jpg" alt="" /></a>
-                <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img2.jpg" alt="" title="这是第二幅图" /></a>
-                <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img3.jpg" alt="" /></a>
-                <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img4.jpg" alt="" title="这是第四幅图" data-thumb="images/img4.jpg" /></a>
+    <div class="content">
+        <div id="wrapper">
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img1.jpg" alt="" /></a>
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img2.jpg" alt="" title="这是第二幅图" /></a>
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img3.jpg" alt="" /></a>
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img4.jpg" alt="" title="这是第四幅图" data-thumb="images/img4.jpg" /></a>
+                </div>
             </div>
         </div>
     </div>
 
-
+    <%--页脚--%>
+    <jsp:include page="page/footer.jsp"/>
 
     <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
     <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/jquery.nivo.slider.js"></script>

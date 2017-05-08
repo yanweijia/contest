@@ -52,22 +52,6 @@ h1{
 	color: #8ECFD5;
 	font-weight:bold;
 }
-.footer{
-	font-family: "Century Gothic";
-	position: absolute;
-	right: 30px;
-	bottom:20px;
-}
-.footer p{
-	font-size:1em;
-	color: #8ECFD5;
-}
-.footer a{
-	 color: #8ECFD5;
-}
-.footer a:hover{
-	text-decoration:underline;
-}
 /*media queries*/
 @media all and (max-width:1366px) and (min-width:1280px){
 .wrap{
@@ -146,9 +130,6 @@ h1{
 .page h2{
 	font-size:1.4em;
 }
-.footer p{
-	font-size: 0.9em;
-}
 }
 @media all and (max-width:320px){
 .wrap{
@@ -166,10 +147,23 @@ h1{
 .page h2{
 	font-size:1.4em;
 }
-.footer{
-	bottom: 10px;
 }
-.footer p{
-	font-size: 0.9em;
+
+.footer404{
+	margin: 20px auto 0;
+	max-width:1000px;
+	text-align:right;
 }
+.footer-container{
+	margin-top:20px;
+}
+.footer404 p{
+	font-size:1em;
+	color: #8ECFD5;
+}
+.footer404 a{
+	color: #8ECFD5;
+}
+.footer404 a:hover{
+	text-decoration:underline;
 }

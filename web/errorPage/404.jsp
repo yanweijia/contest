@@ -21,10 +21,13 @@
 <div class="page">
 	<h2>页面不小心被我们弄丢了. . .</h2>
 </div>
-<div class="footer">
+<div class="footer404">
 	<p>Design by <a href="http://www.yanweijia.cn">严唯嘉</a></p>
 </div>
-
+<div class="footer-container">
+	<%--页脚--%>
+	<jsp:include page="/page/footer.jsp"/>
+</div>
 
 	<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
 	<%--引用paper-kit风格--%>

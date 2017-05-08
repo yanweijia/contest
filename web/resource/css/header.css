@@ -3,11 +3,6 @@ body{
     text-align:center;
     background-color:#FFFCF5;
 }
-.slider-wrapper {
-    position:relative;
-    width: 1000px;
-    margin:0 auto;
-}
 .header{
     position:relative;
     z-index:3000;
@@ -15,7 +10,7 @@ body{
     display:block;
 }
 .header-content{
-    width:1000px;
+    max-width:1000px;
     margin: 0 auto;
     text-align:left;
 }

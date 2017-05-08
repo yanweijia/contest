@@ -26,7 +26,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="model_previousLabel">这是提示标题</h4>
+                    <h4 class="modal-title" id="model_previousLabel">历届作品-提示</h4>
                 </div>
                 <div class="modal-body">
                     没有历届作品可以展示,真尴尬!
