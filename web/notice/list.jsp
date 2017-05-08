@@ -1,6 +1,7 @@
 <%@ page import="entity.Notice" %>
 <%@ page import="java.util.List" %>
 <%@ page import="dao.NoticeDao" %>
+<%@ page import="utils.NetUtils" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--
@@ -54,7 +55,7 @@
                     </span>
                 </div>
                 <div class="notice_title">
-                    <a href="viewNotice.jsp?nid=${notice.nid}" target="_blank">${notice.title}
+                    <a href="<%=NetUtils.getBasePath(request) %>viewNotice.action?nid=${notice.nid}" target="_blank">${notice.title}
                     </a>
                 </div>
             </li>

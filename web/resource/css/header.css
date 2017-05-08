@@ -1,0 +1,46 @@
+body{
+    margin:0 auto;
+    text-align:center;
+    background-color:#FFFCF5;
+}
+.slider-wrapper {
+    position:relative;
+    width: 1000px;
+    margin:0 auto;
+}
+.header{
+    position:relative;
+    z-index:3000;
+    width:100%;
+    display:block;
+}
+.header-content{
+    width:1000px;
+    margin: 0 auto;
+    text-align:left;
+}
+.header-title{
+    text-align:left;
+    display: inline-block;
+    margin-top:15px;
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+}
+.navigation-bar{
+    margin-bottom: 0;
+}
+.navbar-header{
+    float:right;
+}
+.modal-dialog{
+    margin-top:10%;
+    width:300px;
+    padding:10px;
+}
+.modal-footer div .btn-simple{
+    padding:10px;
+}
+.modal-header{
+    padding:10px;
+}

@@ -19,7 +19,7 @@
 
 
 <%--本地文件--%>
-<script src="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/js/jquery-1.10.2.js" type="text/javascript"></script>
+<%--<script src="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/js/jquery-1.10.2.js" type="text/javascript"></script>--%>
 <script src="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
 <script src="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/js/bootstrap.js" type="text/javascript"></script>
         <!--  Plugins -->
