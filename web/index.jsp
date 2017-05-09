@@ -51,23 +51,23 @@
                 <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
                         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                            <li class="active"><a href="#contest-notice" data-toggle="tab">通知</a></li>
-                            <li><a href="#contest-news" data-toggle="tab">新闻</a></li>
-                            <li><a href="#contest-message" data-toggle="tab">大赛信息</a></li>
+                            <li class="active"><a href="#contest-notice" id="noticeNavBar-notice" data-toggle="tab">通知</a></li>
+                            <li><a href="#contest-news" id="noticeNavBar-news" data-toggle="tab">新闻</a></li>
+                            <li><a href="#contest-info" id="noticeNavBar-info" data-toggle="tab">大赛信息</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id="notice-tab-content" class="tab-content text-center">
                     <div class="tab-pane active" id="contest-notice">
-                        <p>这里放大赛通知</p>
+                        <%--这里放大赛通知--%>
                         <jsp:include page="notice/list.jsp?pageNum=1&perPage=8&type=通知&pageType=mini"/>
                     </div>
                     <div class="tab-pane" id="contest-news">
-                        <p>这里放大赛新闻</p>
+                        <%--这里放大赛新闻--%>
                         <jsp:include page="notice/list.jsp?pageNum=1&perPage=8&type=新闻&pageType=mini"/>
                     </div>
-                    <div class="tab-pane" id="contest-message">
-                        <p>这里放大赛信息</p>
+                    <div class="tab-pane" id="contest-info">
+                        <%--这里放大赛信息--%>
                         <jsp:include page="notice/list.jsp?pageNum=1&perPage=8&type=大赛信息&pageType=mini"/>
                     </div>
                 </div>

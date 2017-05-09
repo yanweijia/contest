@@ -41,24 +41,31 @@
 <link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>resource/css/notice-list.css" type="text/css" />
 <div class="noticeList" style="width:100%;">
     <ul>
-        <c:forEach var="notice" items="${noticeList}" varStatus="status">
-            <li class="notice_li">
-                <div class="notice_div_right">
-                    <c:if test="${fn:contains(pageType, 'maxi')}">
+        <c:choose>
+            <c:when test="${noticeList== null || fn:length(noticeList) == 0}">
+                <p>这里没有什么新闻可以显示.</p>
+            </c:when>
+            <c:otherwise>
+                <c:forEach var="notice" items="${noticeList}" varStatus="status">
+                    <li class="notice_li">
+                        <div class="notice_div_right">
+                            <c:if test="${fn:contains(pageType, 'maxi')}">
                         <span class="notice_author">
                                 ${notice.author}
                         </span>
-                    </c:if>
+                            </c:if>
 
-                    <span class="notice_date">
-                            ${fn:substring(notice.posttime, 0, 10)}
-                    </span>
-                </div>
-                <div class="notice_title" style="<%=pageType.equals("maxi")?"max-width:600px;":"max-width:200px;"%>">
-                    <a href="<%=NetUtils.getBasePath(request) %>viewNotice.action?nid=${notice.nid}" target="_blank">${notice.title}
-                    </a>
-                </div>
-            </li>
-        </c:forEach>
+                            <span class="notice_date">
+                                    ${fn:substring(notice.posttime, 0, 10)}
+                            </span>
+                        </div>
+                        <div class="notice_title" style="<%=pageType.equals("maxi")?"max-width:600px;":"max-width:200px;"%>">
+                            <a href="<%=NetUtils.getBasePath(request) %>viewNotice.action?nid=${notice.nid}" target="_blank">${notice.title}
+                            </a>
+                        </div>
+                    </li>
+                </c:forEach>
+            </c:otherwise>
+        </c:choose>
     </ul>
 </div>
