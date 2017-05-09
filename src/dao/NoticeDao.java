@@ -153,6 +153,7 @@ public class NoticeDao {
         }catch(SQLException e){
             logger.error("错误",e);
         }
+        DBManager.closeAll(rs,null,conn);
         return list;
     }
 

@@ -3,7 +3,26 @@
     max-width: 1000px;
     margin:0 auto;
 }
-.content{
+.div-index-content{
     margin:0 auto;
     max-width:1000px;
+}
+.div-index-message{
+    text-align:left;
+    overflow:hidden;
+}
+.div-index-left{
+    display:inline-block;
+    margin-left:0;
+    text-align:left;
+    width:60%;
+    /*border:1px solid #F00;*/
+}
+.div-index-notice{
+    display:inline-block;
+    margin-right:0;
+    float:right;
+    width:40%;
+    /*border:1px solid #F00;*/
+    text-align:left;
 }
