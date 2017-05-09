@@ -38,9 +38,9 @@
     List<Notice> list = NoticeDao.getNoticeByPage(pageNum,perPage,type);
     pageContext.setAttribute("noticeList",list);
 %>
-
+<link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>resource/css/notice-list.css" type="text/css" />
 <div class="noticeList" style="width:100%;">
-    <ul style="width:90%;">
+    <ul>
         <c:forEach var="notice" items="${noticeList}" varStatus="status">
             <li class="notice_li">
                 <div class="notice_div_right">
@@ -54,7 +54,7 @@
                             ${fn:substring(notice.posttime, 0, 10)}
                     </span>
                 </div>
-                <div class="notice_title">
+                <div class="notice_title" style="<%=pageType.equals("maxi")?"max-width:600px;":"max-width:200px;"%>">
                     <a href="<%=NetUtils.getBasePath(request) %>viewNotice.action?nid=${notice.nid}" target="_blank">${notice.title}
                     </a>
                 </div>
@@ -62,32 +62,3 @@
         </c:forEach>
     </ul>
 </div>
-<style>
-    .notice_div_right{
-        float:right;
-    }
-    .notice_author{
-        vertical-align: center;
-        width:100px;
-        display:inline-block;
-        padding-right: 30px;
-        text-align:left;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    .notice_date{
-        display:inline-block;
-        float:right;
-    }
-    .notice_li{
-        height:30px;
-    }
-    .notice_title{
-        <%=pageType.equals("maxi")?"width:600px;":"width:200px;"%>
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-align:left;
-    }
-</style>

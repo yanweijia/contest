@@ -36,18 +36,18 @@
             </div>
         </div>
         <div class="div-index-message">
-            <div class="div-index-left">
+            <div class="div-index-left span8">
                 <p>
                     学校联络人确认截止：2016年11月15日 <br/>
                     网上报名：2016年12月01日到2017年1月15日<br/>
-                    <%--作品提交：2017年03月20日到03月28日<br/>--%>
-                    <%--报名费汇款期限：2017年03月20日到03月28日<br/>--%>
-                    <%--初　　赛：2017年04月08日到04月09日<br/>--%>
-                    <%--决　　赛：2017年04月15日到04月16日<br/>--%>
-                    <%--颁　　奖：2017年5月--%>
+                    作品提交：2017年03月20日到03月28日<br/>
+                    报名费汇款期限：2017年03月20日到03月28日<br/>
+                    初　　赛：2017年04月08日到04月09日<br/>
+                    决　　赛：2017年04月15日到04月16日<br/>
+                    颁　　奖：2017年5月
                 </p>
             </div>
-            <div class="div-index-notice">
+            <div class="div-index-notice span4">
                 <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
                         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">

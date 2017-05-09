@@ -1,0 +1,34 @@
+.notice_div_right{
+    float:right;
+}
+.notice_author{
+    vertical-align: center;
+    width:100px;
+    display:inline-block;
+    padding-right: 30px;
+    text-align:left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.notice_date{
+    display:inline-block;
+    float:right;
+}
+.notice_li{
+    height:30px;
+}
+.notice_title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align:left;
+}
+.noticeList{
+    margin:0 auto;
+    width:90%;
+}
+.noticeList ul{
+    padding-left:5px;
+    margin-right:5px;
+}
