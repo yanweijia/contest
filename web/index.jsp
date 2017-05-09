@@ -1,4 +1,5 @@
-<%@ page import="utils.NetUtils" %><%--
+<%@ page import="utils.NetUtils" %>
+<%@ page import="utils.ConfigUtils" %><%--
   Created by IntelliJ IDEA.
   User: weijia
   Date: 2017-04-20
@@ -9,7 +10,7 @@
 %>
 <html>
 <head>
-    <title>大学生计算机应用能力大赛</title>
+    <title><%=ConfigUtils.getString("indextitle","大学生计算机应用能力大赛") %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <jsp:include page="plug-in/paper-kit-style/css.jsp"/>
@@ -28,9 +29,9 @@
         <div id="wrapper">
             <div class="slider-wrapper theme-default">
                 <div id="slider" class="nivoSlider">
-                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img1.jpg" alt="" /></a>
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img1.jpg" alt="" title=""/></a>
                     <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img2.jpg" alt="" title="这是第二幅图" /></a>
-                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img3.jpg" alt="" /></a>
+                    <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img3.jpg" alt="" title=""/></a>
                     <a href="#"><img src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/images/img4.jpg" alt="" title="这是第四幅图" data-thumb="images/img4.jpg" /></a>
                 </div>
             </div>
