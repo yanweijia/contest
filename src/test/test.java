@@ -17,12 +17,17 @@ import java.util.List;
 public class test {
     private static final Logger logger = LogManager.getLogger(test.class);
     public static void main(String[] args){
-//        logger.info(WorksDao.newWorks(1,"2017","这是作品3名称","计算机科学与技术学院","文科","Web网站设计","周平","18888888888"));
-//        logger.info(UserDao.newUser("yanweijia14","123456","管理员"));
+        String a = "a";
+        Integer b = null;
+        logger.trace("123");
+        logger.debug("456");
+        logger.info("789");
+        try{
+            b = Integer.parseInt(a);
+        }catch(Exception e){
+            logger.error("parse出错了",e);
+        }
 
-//        List<SchoolInfo> list = SchoolInfoDao.querySchoolInfo(null,null,null);
-//        for(SchoolInfo schoolInfo:list){
-//            logger.info(schoolInfo.getName());
-//        }
+        logger.warn("131415");
     }
 }

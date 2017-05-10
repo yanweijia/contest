@@ -19,6 +19,9 @@
                 <a href="#"><button class="btn btn-neutral">大赛通知</button></a>
                 <a href="#"><button class="btn btn-neutral" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
             </div>
+            <div class="help-bar">
+                <p>当前时间</p>
+            </div>
         </div>
     </nav>
     <div class="modal fade" id="model_previous" tabindex="-1" role="dialog" aria-labelledby="model_previousLabel" aria-hidden="true">
