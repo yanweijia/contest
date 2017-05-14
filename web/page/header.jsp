@@ -15,11 +15,11 @@
                     大学生计算机应用能力大赛
                 </span>
                 <div class="navbar-header">
-                    <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral">首　页</button></a>
-                    <a href="#"><button class="btn btn-neutral">大赛信息</button></a>
-                    <a href="#"><button class="btn btn-neutral">新　闻</button></a>
-                    <a href="#"><button class="btn btn-neutral">大赛通知</button></a>
-                    <a href="#"><button class="btn btn-neutral" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
+                    <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral navBtn">首　页</button></a>
+                    <a href="#"><button class="btn btn-neutral navBtn">大赛信息</button></a>
+                    <a href="#"><button class="btn btn-neutral navBtn">新　闻</button></a>
+                    <a href="#"><button class="btn btn-neutral navBtn">大赛通知</button></a>
+                    <a href="#"><button class="btn btn-neutral navBtn" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
                 </div>
             </div>
             <div class="help-bar">
@@ -35,8 +35,10 @@
                             密 码:
                             <input type="password" class="min-input" minlength="4" maxlength="16" size="13" required="required" name="password" id="form_password"/>
                         </label>
-                        <input type="submit" class="button" value="登录"/>
-                        <a href="<%=NetUtils.getBasePath(request) %>register.jsp"><input type="button" class="button" value="注册"/></a>
+                        <span class="btn-group">
+                            <input type="submit" class="button" value="登录"/>
+                            <a href="<%=NetUtils.getBasePath(request) %>register.jsp"><input type="button" class="button" value="注册"/></a>
+                        </span>
                     </form>
                 </div>
             </div>
