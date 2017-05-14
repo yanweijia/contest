@@ -22,6 +22,9 @@ body{
     font-weight:bold;
     color:white;
 }
+.titleNav{
+    overflow:hidden;
+}
 .navigation-bar{
     margin-bottom: 0;
 }
@@ -41,4 +44,87 @@ body{
 }
 .help-bar{
     margin-top:10px;
+    overflow: hidden;
+}
+.help-bar-form{
+    float:right;
+}
+.color-white{
+    color:white;
+}
+.header-form{
+    margin-bottom:0;
+}
+.header-form label{
+    margin-bottom:0;
+    font-size:14px;
+    color:white;
+}
+.header-form .button {
+    outline:none;
+    background-color:transparent;
+    -moz-border-radius:14px;
+    -webkit-border-radius:14px;
+    border-radius:14px;
+    border:2px solid white;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: Arial, serif;
+    font-size:14px;
+    padding:1px 10px;
+    text-decoration:none;
+}
+.header-form .button:hover {
+    color:#66615B;
+    background-color:white;
+}
+.header-form .button:active {
+    position:relative;
+    top:1px;
+}
+.min-input {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    opacity: 0.77;
+    padding: 1px 5px;
+    overflow: hidden;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "Times New Roman", Times, serif;
+    color: rgba(0,0,0,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(252,252,252,1);
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2) inset;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+}
+
+.min-input:hover {
+    overflow: visible;
+    border: 1px solid #a3a3a3;
+    background: rgba(255,255,255,1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+    -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.min-input:focus {
+    outline:none;
+    border: 1px solid #018dc4;
+    font: normal medium/normal Arial, Helvetica, sans-serif;
+    color: rgba(0,142,198,1);
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.2) inset;
+    -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
 }

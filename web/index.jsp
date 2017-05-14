@@ -80,7 +80,7 @@
     <%--页脚--%>
     <jsp:include page="page/footer.jsp"/>
 
-    <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
+    <%--header.jsp已经引用过JQuery,不用再次引用--%>
     <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/nivo-slider/jquery.nivo.slider.js"></script>
 
     <%--引用paper-kit风格--%>

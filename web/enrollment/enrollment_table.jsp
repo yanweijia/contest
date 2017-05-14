@@ -354,11 +354,9 @@
     </table>
     <div style="width:100%;align-content: center;">
 
-        <span style="width:33%"><input type="button" value="手动提交" onclick="ajaxSubmit();"/></span>
+        <span style="width:50%;"><input type="submit" class="submitbtn" value="提交" /></span>
 
-        <span style="width:33%;"><input type="submit" class="submitbtn" value="提交" /></span>
-
-        <span style="width:33%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
+        <span style="width:50%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
     </div>
 
 </form>

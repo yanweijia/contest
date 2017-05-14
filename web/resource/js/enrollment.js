@@ -18,28 +18,9 @@ $(".student3").attr("disabled","disabled");
 $("#table_enrollment :input[type!=radio][type!=checkbox]").css("width","100%");
 
 
-/**
- * 用ajax的方法提交报名信息,并显示结果.
- */
-function ajaxSubmit(){
-    if(!checkBeforeSubmit()){
-        return;
-    }
-    $.post('/enroll.action', $("#form_enrollment").serialize(), function(data) {
-        var jsonResult = eval('('+data+')');
-        if(jsonResult.result){
-            alert('提交成功');
-        }else{
-            alert(jsonResult.reason);
-        }
-    });
-}
-
-
-
 
 /**
- * 提交前进行表单验证
+ * 提交前再次进行表单数据的合法性验证
  */
 function checkBeforeSubmit(){
 
@@ -78,7 +59,17 @@ function checkBeforeSubmit(){
         }
     }
 
-    return true;
+    //用ajax的方法提交报名信息,并显示结果.
+    $.post('/enroll.action', $("#form_enrollment").serialize(), function(data) {
+        var jsonResult = eval('('+data+')');
+        if(jsonResult.result){
+            alert('提交成功');
+        }else{
+            alert(jsonResult.reason);
+        }
+    });
+
+    return false;   //阻止表单自己再次提交
 }
 
 /**

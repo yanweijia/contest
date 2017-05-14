@@ -1,4 +1,5 @@
-<%@ page import="utils.NetUtils" %><%--
+<%@ page import="utils.NetUtils" %>
+<%@ page import="utils.DateUtils" %><%--
   Created by IntelliJ IDEA.
   User: weijia
   Date: 2017-05-08
@@ -9,18 +10,35 @@
 <div id="navbar" class="header">
     <nav class="navbar navbar-ct-primary navigation-bar" role="navigation">
         <div class="header-content">
+            <div class="titleNav">
                 <span class="header-title">
                     大学生计算机应用能力大赛
                 </span>
-            <div class="navbar-header" style="float:right;">
-                <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral">首　页</button></a>
-                <a href="#"><button class="btn btn-neutral">大赛信息</button></a>
-                <a href="#"><button class="btn btn-neutral">新　闻</button></a>
-                <a href="#"><button class="btn btn-neutral">大赛通知</button></a>
-                <a href="#"><button class="btn btn-neutral" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
+                <div class="navbar-header">
+                    <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral">首　页</button></a>
+                    <a href="#"><button class="btn btn-neutral">大赛信息</button></a>
+                    <a href="#"><button class="btn btn-neutral">新　闻</button></a>
+                    <a href="#"><button class="btn btn-neutral">大赛通知</button></a>
+                    <a href="#"><button class="btn btn-neutral" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
+                </div>
             </div>
             <div class="help-bar">
-                <p>当前时间</p>
+                <span class="color-white"><%=DateUtils.getDate() %> &nbsp; <%=DateUtils.getDayOfWeek() %></span>
+                <div class="help-bar-form">
+                    <%--这里表单登录在onsubmit的函数中实现,不用表单自己的方法提交,表单仅用来验证数据--%>
+                    <form id="form_login" class="header-form" action="<%=NetUtils.getBasePath(request) %>login.action" onsubmit="return checkBeforeLogin();">
+                        <label for="form_username">
+                            用户名:
+                            <input type="text" class="min-input" minlength="4" maxlength="30" size="13" required="required" name="username" id="form_username"/>
+                        </label>
+                        <label for="form_password">
+                            密 码:
+                            <input type="password" class="min-input" minlength="4" maxlength="16" size="13" required="required" name="password" id="form_password"/>
+                        </label>
+                        <input type="submit" class="button" value="登录"/>
+                        <a href="<%=NetUtils.getBasePath(request) %>register.jsp"><input type="button" class="button" value="注册"/></a>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
@@ -47,3 +65,5 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
+<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/header.js"></script>
