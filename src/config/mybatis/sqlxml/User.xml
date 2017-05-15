@@ -13,11 +13,39 @@
         <result column="type" jdbcType="VARCHAR" property="type"/>
     </resultMap>
 
+    <!--查询用户-->
+    <select id="queryUserByUserNameOrUid" parameterType="entity.User" resultMap="UserResult">
+        SELECT uid,username,password,type FROM user
+        <if test="_parameter!=null">
+            <where>
+                <if test="uid!=null">
+                    AND uid=#{uid}
+                </if>
+                <if test="username!=null">
+                    AND username=#{username}
+                </if>
+            </where>
+        </if>
+    </select>
+
+
+
+
     <!--获取符合条件的用户列表-->
     <select id="queryUsers" parameterType="entity.User" resultMap="UserResult">
         SELECT uid,username,password,type FROM user
-        <if test="user!=null &amp;&amp; user.type!=null">
-            WHERE type=#{user.type}
+        <if test="_parameter!=null">
+            <where>
+                <if test="type!=null">
+                    AND type=#{type}
+                </if>
+                <if test="uid!=null">
+                    AND uid=#{uid}
+                </if>
+                <if test="username!=null">
+                    AND username LIKE '%' #{username} '%'
+                </if>
+            </where>
         </if>
         LIMIT
         <choose>

@@ -32,6 +32,24 @@ public class UserDao {
     }
 
     /**
+     * 通过uid或username查询用户信息,两参数必填一个
+     * @param uid 用户编号,可空
+     * @param username 用户名,可空
+     * @return
+     */
+    public static User getUserByUidOrUsername(Integer uid,String username){
+        User user = new User();
+        user.setUid(uid!=null?uid.longValue():null);
+        user.setUsername(username);
+        List<User> list = DBAccess.selectList("User.queryUserByUserNameOrUid",user);
+        if(list.size()!=0)
+            return list.get(0);
+        else
+            return null;
+    }
+
+
+    /**
      * 根据用户类型查询符合条件的用户
      * @param type 用户类型
      * @param perPage 每页个数
