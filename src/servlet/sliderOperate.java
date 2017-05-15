@@ -27,7 +27,6 @@ import java.util.Map;
 public class sliderOperate extends HttpServlet {
     private static final Logger logger = LogManager.getLogger(sliderOperate.class);
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/javascript; charset=utf-8");
         PrintWriter out = response.getWriter();
         String method = request.getParameter("method");
         if("update".equals(method)){
