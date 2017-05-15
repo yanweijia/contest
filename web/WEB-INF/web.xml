@@ -10,6 +10,17 @@
     </error-page>
 
 
+    <!--检测是否需要登录过滤器-->
+    <filter>
+        <filter-name>checkLoginFilter</filter-name>
+        <filter-class>filter.login.CheckLoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>checkLoginFilter</filter-name>
+        <url-pattern>/postNotice.action</url-pattern>
+        <url-pattern>/enroll.action</url-pattern>
+    </filter-mapping>
+
 
     <!--网站编码过滤器,默认UTF-8编码,跟JSP页面相同-->
     <filter>

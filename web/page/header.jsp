@@ -16,9 +16,9 @@
                 </span>
                 <div class="navbar-header">
                     <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral navBtn">首　页</button></a>
-                    <a href="#"><button class="btn btn-neutral navBtn">大赛信息</button></a>
-                    <a href="#"><button class="btn btn-neutral navBtn">新　闻</button></a>
-                    <a href="#"><button class="btn btn-neutral navBtn">大赛通知</button></a>
+                    <a href="<%=NetUtils.getBasePath(request) %>notice.jsp?type=大赛信息"><button class="btn btn-neutral navBtn">大赛信息</button></a>
+                    <a href="<%=NetUtils.getBasePath(request) %>notice.jsp?type=新闻"><button class="btn btn-neutral navBtn">新　闻</button></a>
+                    <a href="<%=NetUtils.getBasePath(request) %>notice.jsp?type=通知"><button class="btn btn-neutral navBtn">大赛通知</button></a>
                     <a href="#"><button class="btn btn-neutral navBtn" data-toggle="modal" data-target="#model_previous">历届作品</button></a>
                 </div>
             </div>

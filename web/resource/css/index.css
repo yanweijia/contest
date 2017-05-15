@@ -6,6 +6,7 @@
 .div-index-content{
     margin:0 auto;
     max-width:1000px;
+    min-height:300px;
 }
 .div-index-message{
     text-align:left;

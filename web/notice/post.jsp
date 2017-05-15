@@ -5,7 +5,7 @@
   Time: 21:58
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--TODO:用过滤器判断用户是否拥有发送notice的权限--%>
+<%--用过滤器判断用户是否拥有发送notice的权限--%>
 
 
 
