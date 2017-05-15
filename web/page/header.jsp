@@ -11,9 +11,11 @@
     <nav class="navbar navbar-ct-primary navigation-bar" role="navigation">
         <div class="header-content">
             <div class="titleNav">
-                <span class="header-title">
-                    大学生计算机应用能力大赛
-                </span>
+                <a href="<%=NetUtils.getBasePath(request)%>">
+                    <span class="header-title">
+                        大学生计算机应用能力大赛
+                    </span>
+                </a>
                 <div class="navbar-header">
                     <a href="<%=NetUtils.getBasePath(request) %>"><button class="btn btn-neutral navBtn">首　页</button></a>
                     <a href="<%=NetUtils.getBasePath(request) %>notice.jsp?type=大赛信息"><button class="btn btn-neutral navBtn">大赛信息</button></a>

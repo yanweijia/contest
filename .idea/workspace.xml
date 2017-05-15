@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/filter/login/CheckLoginFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/notice.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notice/post.jsp" afterPath="$PROJECT_DIR$/web/notice/post.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/header.jsp" afterPath="$PROJECT_DIR$/web/page/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resource/css/index.css" afterPath="$PROJECT_DIR$/web/resource/css/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,28 +72,7 @@
     <favorites_list name="contest" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="notice.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/notice.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/page/header.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -218,9 +192,9 @@
         <option value="$PROJECT_DIR$/src/filter/login/CheckLoginFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/resource/css/index.css" />
-        <option value="$PROJECT_DIR$/web/page/header.jsp" />
         <option value="$PROJECT_DIR$/web/notice.jsp" />
         <option value="$PROJECT_DIR$/web/notice/post.jsp" />
+        <option value="$PROJECT_DIR$/web/page/header.jsp" />
       </list>
     </option>
   </component>
@@ -1207,7 +1181,7 @@
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
       <workItem from="1494075573610" duration="129933000" />
-      <workItem from="1494826474211" duration="1119000" />
+      <workItem from="1494826474211" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1447,11 +1421,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494769666979</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="1.检查是否登录过滤器编写配置&#10;2.新闻浏览页面编写">
+      <created>1494827666813</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1494827666813</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283114000" />
+    <option name="totallyTimeSpent" value="283770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1568,7 +1549,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="backup" />
     <MESSAGE value="修改post.jsp提交方式,使用常规form提交,同时修改PostNotice的Servlet" />
     <MESSAGE value="数据库表的实体类生成" />
     <MESSAGE value="调整配置文件目录结构" />
@@ -1593,7 +1573,8 @@
     <MESSAGE value="sliderOperate修改完成" />
     <MESSAGE value="1.header.jsp中加入登录表单&#10;2.header.jsp中表单提交前验证&#10;3.enroll.js表单提交用form自己进行验证,然后用ajax进行提交" />
     <MESSAGE value="首页使用accordionSlider填满,首页完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="首页使用accordionSlider填满,首页完成" />
+    <MESSAGE value="1.检查是否登录过滤器编写配置&#10;2.新闻浏览页面编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.检查是否登录过滤器编写配置&#10;2.新闻浏览页面编写" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1958,6 +1939,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1965,6 +1949,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2000,14 +1985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/notice/post.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -2019,7 +1996,15 @@
     <entry file="file://$PROJECT_DIR$/web/notice.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
-          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding />
         </state>
       </provider>
