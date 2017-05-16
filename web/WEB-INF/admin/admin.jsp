@@ -26,8 +26,8 @@
 
         <dl class="">
             <dt>网站设置<img src=""></dt>
-            <dd class="first_dd"><a href="#">首页slider维护</a></dd>
-            <dd><a href="#" onclick="loadContent('#');">网站配置</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/sliderConfig.jsp')">首页slider维护</a></dd>
+            <dd><a href="#" onclick="loadContent('page/admin/admin/websiteConfig.jsp');">网站配置</a></dd>
         </dl>
 
         <dl class="">
@@ -47,14 +47,14 @@
 
         <dl class="">
             <dt>作品管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">作品浏览&amp;导出</a></dd>
-            <dd><a href="#" onclick="loadContent('enrollment/enrollment_table.jsp')">新增作品</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/viewWorks.jsp')">作品浏览&amp;导出</a></dd>
+            <dd><a href="#" onclick="loadContent('page/admin/enrollment_table.jsp')">新增作品</a></dd>
         </dl>
 
         <dl class="">
             <dt>我的账户<img src=""></dt>
-            <dd class="first_dd"><a href="#">信息维护</a></dd>
-            <dd><a href="#">修改用户密码</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/updateUserInfo.jsp')">信息维护</a></dd>
+            <dd><a href="#" onclick="loadContent('page/admin/changePassword.jsp')">修改用户密码</a></dd>
         </dl>
 
     </div>

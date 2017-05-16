@@ -10,7 +10,7 @@
 <html>
 <head>
     <title><%=request.getParameter("type")==null?"":(request.getParameter("type") + " - ")%>
-        <%=ConfigUtils.getString("indextitle","大学生计算机应用能力大赛") %></title>
+        <%=ConfigUtils.getString("websiteName","大学生计算机应用能力大赛") %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <jsp:include page="plug-in/paper-kit-style/css.jsp"/>

@@ -1,4 +1,4 @@
-package servlet;
+package servlet.admin;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +16,7 @@ public class admin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String type = (String)session.getAttribute("type");
+        //TODO:为了调试方便,发布时请将1=1所在if语句去除.
         if(1==1) {
             request.getRequestDispatcher("/WEB-INF/admin/admin.jsp").forward(request, response);
             return;
