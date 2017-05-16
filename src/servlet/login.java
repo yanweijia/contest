@@ -20,28 +20,38 @@ public class login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-        String username,password;
-        username = request.getParameter("username");
-        username = username==null?"":username;  //防止username获取为null
-        password = request.getParameter("password");
-        password = password==null?"":password;  //防止password为null
-        User user = UserDao.getUserByUidOrUsername(null,username);
-
-        if(user==null){
-            NetUtils.writeResultToBrowser(out,false,"登录失败,未传参或不存在该用户!");
-            out.close();
-            return;
-        }
-
-        if(password.equals(user.getPassword())){
-            //登录成功
-            session.setAttribute("valid",true);
-            session.setAttribute("uid",Integer.parseInt(""+user.getUid()));
-            session.setAttribute("type",user.getType());
-            NetUtils.writeResultToBrowser(out,true,"登录成功!");
+        String method = request.getParameter("method");
+        if("logout".equals(method)){
+            session.removeAttribute("valid");
+            session.removeAttribute("uid");
+            session.removeAttribute("type");
+            session.removeAttribute("username");
+            NetUtils.writeResultToBrowser(out,true,"登出成功!");
         }else{
-            //登录失败
-            NetUtils.writeResultToBrowser(out,false,"登录失败,未输入用户名密码或不匹配!");
+            String username,password;
+            username = request.getParameter("username");
+            username = username==null?"":username;  //防止username获取为null
+            password = request.getParameter("password");
+            password = password==null?"":password;  //防止password为null
+            User user = UserDao.getUserByUidOrUsername(null,username);
+
+            if(user==null){
+                NetUtils.writeResultToBrowser(out,false,"登录失败,未传参或不存在该用户!");
+                out.close();
+                return;
+            }
+
+            if(password.equals(user.getPassword())){
+                //登录成功
+                session.setAttribute("valid",true);
+                session.setAttribute("uid",Integer.parseInt(""+user.getUid()));
+                session.setAttribute("type",user.getType());
+                session.setAttribute("username",user.getUsername());
+                NetUtils.writeResultToBrowser(out,true,"登录成功!");
+            }else{
+                //登录失败
+                NetUtils.writeResultToBrowser(out,false,"登录失败,未输入用户名密码或不匹配!");
+            }
         }
         out.close();
     }

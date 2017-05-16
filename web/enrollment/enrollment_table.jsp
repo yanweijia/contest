@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="<%=NetUtils.getBasePath(request) %>resource/css/enrollment.css" >
 
 
-<%--TODO: JQuery包,后期集成的时候记得去除--%>
-<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
+<%--JQuery包,后期集成的时候记得去除--%>
+<%--<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>--%>
 
 
-<form id="form_enrollment" name="form_enrollment" action="<%=NetUtils.getBasePath(request) %>enroll.action" method="GET" style="width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
+<form id="form_enrollment" name="form_enrollment" action="<%=NetUtils.getBasePath(request) %>enroll.action" method="GET" style="max-width:700px;" onsubmit="return checkBeforeSubmit();"> <%--测试先用GET提交数据--%>
     <input type="hidden" name="method" value="<%="new" %>" required readonly/>
     <input type="hidden" name="season" value="2017" required readonly/>
     <table border="1" cellspacing="0px" bordercolor="gray" id="table_enrollment">

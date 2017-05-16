@@ -12,8 +12,9 @@ function checkBeforeLogin(){
     $.post('/login.action', $("#form_login").serialize(), function(data) {
         var jsonResult = eval('('+data+')');
         if(jsonResult.result){
-            //自动跳转到登录后页面
             alert('登录成功!');
+            //自动跳转到登录后页面
+            window.location.href="/admin.action";
         }else{
             alert(jsonResult.reason);
         }
