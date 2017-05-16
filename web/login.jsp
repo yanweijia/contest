@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>用户登录 - 上海市大学生应用能力技术大赛</title>
-    <meta name="author" content="DeathGhost"/>
+    <meta name="author" content="weijia"/>
     <link rel="stylesheet" type="text/css" href="<%=NetUtils.getBasePath(request) %>resource/css/login.css"
           tppabs="css/style.css"/>
     <style>
