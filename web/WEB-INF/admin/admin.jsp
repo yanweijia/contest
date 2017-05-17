@@ -13,7 +13,7 @@
 <body id="bg">
 <div class="admin_bar">
     <a href="<%=NetUtils.getBasePath(request )%>" style="margin-left:20px;">返回首页</a>
-    <span style="margin-left:30px;">欢迎您:${(empty username)?"神秘人":username}</span>
+    <span style="margin-left:30px;">欢迎您:${(empty username)?"神秘人":username}(${(empty type)?"未知用户类型":type})</span>
     <span class="adminbar_logout" onclick="logout();">退出</span>
 </div>
 <div class="pageContainer">
