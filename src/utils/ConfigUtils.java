@@ -84,6 +84,18 @@ public class ConfigUtils {
         return config.getLong(key, defaultValue);
     }
 
+
+    /**
+     * 获取Boolean参数
+     * @param key
+     * @param defaultValue
+     * @return
+     */
+    public static Boolean getBoolean(String key,Boolean defaultValue){
+        return config.getBoolean(key,defaultValue);
+    }
+
+
     /**
      * 新增或修改参数
      *

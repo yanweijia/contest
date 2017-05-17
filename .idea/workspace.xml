@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlet/admin/websiteConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/page/admin/changePassword.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/page/admin/viewWorks.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/config/config.properties" afterPath="$PROJECT_DIR$/src/config/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/ConfigUtils.java" afterPath="$PROJECT_DIR$/src/utils/ConfigUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/admin/admin.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notice.jsp" afterPath="$PROJECT_DIR$/web/notice.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/servlet/admin.java" afterPath="$PROJECT_DIR$/src/servlet/admin/admin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/enrollment/enrollment_table.jsp" afterPath="$PROJECT_DIR$/web/page/admin/enrollment_table.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/page/admin/welcome.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/welcome.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,11 +59,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/servlet/admin/admin.java">
+      <file leaf-file-name="sliderConfig.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="288">
+              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1495005433371" expanded="true" signature="2392:2407" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="websiteConfig.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="49" column="61" lean-forward="false" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/page/admin/admin/welcome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sliderOperate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -150,14 +177,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/db/DBManager.java" />
-        <option value="$PROJECT_DIR$/web/resource/css/post.css" />
         <option value="$PROJECT_DIR$/web/plug-in/paper-kit-style/css.jsp" />
         <option value="$PROJECT_DIR$/web/resource/css/list.css" />
         <option value="$PROJECT_DIR$/web/notice/list.jsp" />
         <option value="$PROJECT_DIR$/src/config/dbcp.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/lib/commons-configuration-1.10.jar!/org/apache/commons/configuration/AbstractFileConfiguration.class" />
-        <option value="$PROJECT_DIR$/src/utils/ConfigUtils.java" />
         <option value="$PROJECT_DIR$/src/dao/SchoolInfoDao.java" />
         <option value="$PROJECT_DIR$/src/test/test.java" />
         <option value="$PROJECT_DIR$/src/utils/DateUtils.java" />
@@ -198,9 +222,12 @@
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/notice.jsp" />
         <option value="$PROJECT_DIR$/src/config/config.properties" />
-        <option value="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/admin/websiteConfig.java" />
         <option value="$PROJECT_DIR$/src/servlet/admin/admin.java" />
+        <option value="$PROJECT_DIR$/src/utils/ConfigUtils.java" />
+        <option value="$PROJECT_DIR$/web/page/admin/admin/welcome.jsp" />
+        <option value="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" />
+        <option value="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" />
       </list>
     </option>
   </component>
@@ -436,29 +463,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="plug-in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,22 +484,8 @@
               <option name="myItemId" value="plug-in" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="contest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
+              <option name="myItemId" value="paper-kit-style" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,6 +504,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -648,8 +683,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="I:\workspace_idea\contest\web\page\admin" />
       <recent name="I:\workspace_idea\contest\web\page\admin\admin" />
+      <recent name="I:\workspace_idea\contest\web\page\admin" />
       <recent name="I:\workspace_idea\contest\web\resource\image\admin" />
       <recent name="I:\workspace_idea\contest\项目其他文档" />
       <recent name="I:\workspace_idea\contest\web\plug-in\paper-kit-style\fonts" />
@@ -1248,7 +1283,7 @@
       <workItem from="1493890931983" duration="37474000" />
       <workItem from="1494074137473" duration="44000" />
       <workItem from="1494075573610" duration="129933000" />
-      <workItem from="1494826474211" duration="38927000" />
+      <workItem from="1494826474211" duration="51271000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交,新闻发布界面">
       <created>1492794639534</created>
@@ -1530,11 +1565,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494926376257</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="后台管理员修改网站配置servelt完成">
+      <created>1494938624799</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1494938624799</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320922000" />
+    <option name="totallyTimeSpent" value="333266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1557,7 +1599,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49519232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.122329056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.27440348" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2548807" sideWeight="0.49786323" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3264642" sideWeight="0.49786323" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2008547" sideWeight="0.49436393" order="3" side_tool="false" content_ui="combo" />
@@ -1651,7 +1693,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DBAccess对相关sql的执行进行了异常捕获,尽量保证sql异常不会输出到前端." />
     <MESSAGE value="Mybatis报名相关异常的抛出" />
     <MESSAGE value="DBAccess相关异常的捕获" />
     <MESSAGE value="修改:Enroll.action输出错误信息后没有及时返回" />
@@ -1676,7 +1717,8 @@
     <MESSAGE value="去除response.setContentType(),之前设置出错,导致$.post()获取到结果无法弹出." />
     <MESSAGE value="1.admin.action管理页面控制层做好&#10;2.admin左侧菜单栏" />
     <MESSAGE value="1.网站后台模型搭建完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.网站后台模型搭建完成" />
+    <MESSAGE value="后台管理员修改网站配置servelt完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="后台管理员修改网站配置servelt完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1689,17 +1731,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/config/mybatis/sqlxml/UserInfo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <marker date="1494074099368" expanded="true" signature="763:1325" ph="UPDATE user_... " />
-            <marker date="1494074099368" expanded="true" signature="1428:1668" ph="INSERT INTO user_info... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/DBAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1770,14 +1801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1748">
           <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1867,16 +1890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/admin/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resource/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1927,14 +1940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/mybatis/mybatisConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1977,14 +1982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -2080,26 +2077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/plug-in/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="2" column="4687" lean-forward="false" selection-start-line="2" selection-start-column="4682" selection-end-line="2" selection-end-column="4687" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="71" column="90" lean-forward="false" selection-start-line="71" selection-start-column="90" selection-end-line="71" selection-end-column="90" />
           <folding />
         </state>
       </provider>
@@ -2122,8 +2103,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/admin/admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="608">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="81" column="7" lean-forward="true" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+          <folding>
+            <element signature="e#2166#2167#0" expanded="false" />
+            <element signature="e#2224#2225#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1495005433371" expanded="true" signature="2392:2407" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="49" column="61" lean-forward="false" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
           <folding />
         </state>
       </provider>

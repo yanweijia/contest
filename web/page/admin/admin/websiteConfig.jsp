@@ -1,4 +1,5 @@
 <%@ page import="utils.DateUtils" %>
+<%@ page import="utils.ConfigUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div style="color:black;">
 
@@ -12,7 +13,7 @@
                     网站名称:
                 </td>
                 <td>
-                    <input type="text" name="websiteName" minlength="2" maxlength="50" placeholder="请输入网站名称" required="required"/>
+                    <input type="text" name="websiteName" minlength="2" maxlength="50" placeholder="请输入网站名称" value="<%=ConfigUtils.getString("websiteName","大学生计算机应用能力大赛")%>" required="required"/>
                 </td>
             </tr>
             <tr>
@@ -21,10 +22,10 @@
                 </td>
                 <td>
                     <label for="enrollSwitch1">
-                        <input type="radio" name="enrollSwitch" id="enrollSwitch1" value="open" checked="checked"/>开
+                        <input type="radio" name="enrollSwitch" id="enrollSwitch1" value="open" <%=ConfigUtils.getBoolean("enrollSwitch",true)?"checked":"" %>/>开
                     </label>
                     <label for="enrollSwitch2">
-                        <input type="radio" name="enrollSwitch" id="enrollSwitch2" value="close" />关
+                        <input type="radio" name="enrollSwitch" id="enrollSwitch2" value="close" <%=ConfigUtils.getBoolean("enrollSwitch",true)?"":"checked" %>/>关
                     </label>
                 </td>
             </tr>
@@ -34,10 +35,10 @@
                 </td>
                 <td>
                     <label for="webSwitch1">
-                        <input type="radio" name="webSwitch" id="webSwitch1" value="open" checked="checked"/>开
+                        <input type="radio" name="webSwitch" id="webSwitch1" value="open"  <%=ConfigUtils.getBoolean("webSwitch",true)?"checked":"" %>/>开
                     </label>
                     <label for="webSwitch2">
-                        <input type="radio" name="webSwitch" id="webSwitch2" value="close" />关
+                        <input type="radio" name="webSwitch" id="webSwitch2" value="close"  <%=ConfigUtils.getBoolean("webSwitch",true)?"":"checked" %>/>关
                     </label>
                 </td>
             </tr>
@@ -46,7 +47,7 @@
                     &nbsp;
                 </td>
                 <td>
-                    <input type="submit" value="确定修改"/>
+                    <input type="submit" class="btn btn-info" value="确定修改"/>
                 </td>
             </tr>
         </table>

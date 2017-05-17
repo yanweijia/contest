@@ -59,7 +59,7 @@
 
     </div>
     <div class="mycontainer" id="container">
-        <jsp:include page="/page/admin/welcome.jsp"/>
+        <jsp:include page="/page/admin/admin/welcome.jsp"/>
     </div>
 </div>
 
