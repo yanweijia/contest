@@ -30,7 +30,7 @@
         <input type="submit" class="btn btn-info" value="提交"/>
     </form>
 </div>
-<style>
+<style type="text/css">
     #sliderConfigDiv{
         color:black;
         display:inline-block;/*下面三行css确保宽度div宽度随容器自适应*/

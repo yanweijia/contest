@@ -32,7 +32,7 @@
                     报名号
                 </td>
                 <td colspan="3" style="">
-                    <input type="text" name="wid" id="input_wid" value="170230" minlength="1" maxlength="10" required readonly/>
+                    <input type="text" name="wid" id="input_wid" value="报名后系统自动生成" minlength="1" maxlength="10" required readonly/>
                 </td>
             </tr>
             <tr style=";height:40px">
