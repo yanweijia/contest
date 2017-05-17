@@ -6,8 +6,6 @@
   Time: 21:37
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-%>
 <html>
 <head>
     <title><%=ConfigUtils.getString("websiteName","大学生计算机应用能力大赛") %></title>

@@ -3,7 +3,7 @@
 <div id="sliderConfigDiv">
 
     <form action="/sliderOperate" method="POST" id="form_sliderConfig" onsubmit="return submitSliderConfig();">
-        <h1>这是sliderConfig页面</h1>
+        <h1>sliderConfig:设置首页轮播图片</h1>
         <table id="table_sliderConfig">
             <tr>
                 <td style="padding:0 10px;">

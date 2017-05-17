@@ -6,7 +6,7 @@
     <form action="/websiteConfig.action" id="form_websiteConfig" method="POST" onsubmit="return submitWebsiteConfig();">
         <table>
             <th colspan="2">
-                <h1>后台网站设置</h1>
+                <h1>网站设置</h1>
             </th>
             <tr>
                 <td>

@@ -354,9 +354,9 @@
     </table>
     <div style="width:100%;align-content: center;">
 
-        <span style="width:50%;"><input type="submit" class="submitbtn" value="提交" /></span>
+        <span style="width:50%;"><input type="submit" class="submitbtn btn btn-info" value="提交" /></span>
 
-        <span style="width:50%;"><input type="button" class="resetbtn" value="重填" onclick="form_enrollment.reset();" /></span>
+        <span style="width:50%;"><input type="button" class="resetbtn btn btn-info" value="重填" onclick="form_enrollment.reset();" /></span>
     </div>
 
 </form>
