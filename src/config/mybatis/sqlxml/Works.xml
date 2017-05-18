@@ -18,6 +18,40 @@
         <result column="teacherPhone" jdbcType="VARCHAR" property="teacherphone"/>
     </resultMap>
 
+
+    <!--支持模糊查询让管理员筛选一些作品信息-->
+    <select id="queryWorksListBy" parameterType="java.util.Map" resultMap="WorksResult">
+        SELECT wid,sid,season,name,college,majorType,category,teacherName,teacherPhone FROM works
+        <where>
+            <if test="season!=null">
+                AND season LIKE '%' #{season} '%'
+            </if>
+            <if test="name!=null">
+                AND name LIKE '%' #{name} '%'
+            </if>
+            <if test="school!=null &amp;&amp; !&quot;&quot;.equals(school)">
+                AND sid IN (SELECT sid FROM school_info WHERE name LIKE '%' #{school} '%')
+            </if>
+            <if test="majorType!=null &amp;&amp; majorType.length!=0">
+                AND majorType IN
+                <foreach collection="majorType" item="item" separator="," open="(" close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="category!=null &amp;&amp; category.length!=0">
+                AND category IN
+                <foreach collection="category" item="item" separator="," open="(" close=")">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+
+
+
+
+
+
     <!--选取符合条件的Works,结果类型为List<Works>-->
     <select id="queryWorksList" parameterType="java.util.Map" resultMap="WorksResult">
         SELECT wid,sid,season,name,college,majorType,category,teacherName,teacherPhone FROM works

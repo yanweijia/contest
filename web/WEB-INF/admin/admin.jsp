@@ -29,7 +29,11 @@
             <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/sliderConfig.jsp')">首页slider维护</a></dd>
             <dd><a href="#" onclick="loadContent('page/admin/admin/websiteConfig.jsp');">网站配置</a></dd>
         </dl>
-
+        <dl class="">
+            <dt>新闻管理<img src=""></dt>
+            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/noticeManage.jsp')">新闻管理</a></dd>
+            <dd><a href="#" onclick="loadContent('page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
+        </dl>
         <dl class="">
             <dt>学校管理<img src=""></dt>
             <dd class="first_dd"><a href="#">学校查询</a></dd>

@@ -17,6 +17,34 @@ import java.util.Map;
 public class WorksDao {
     private static final Logger logger = LogManager.getLogger(WorksDao.class);
 
+    /**
+     * 按指定条件查询信息,主要用来让管理员筛选作品信息.
+     * @param season
+     * @param school
+     * @param name
+     * @param majorType
+     * @param category
+     * @param perPage
+     * @param pageNum
+     * @return
+     */
+    public static List<Works> queryWorksListBy(String season,
+                                               String school,
+                                               String name,
+                                               String[] majorType,
+                                               String[] category,
+                                               Integer perPage,
+                                               Integer pageNum){
+        Map<String,Object> map = new HashMap<>();
+        map.put("season",season);
+        map.put("name",name);
+        map.put("school",school);
+        map.put("majorType",majorType);
+        map.put("category",category);
+        map.put("perPage",perPage);
+        map.put("pageNum",pageNum);
+        return DBAccess.selectList("Works.queryWorksListBy",map);
+    }
 
     /**
      * 根据传递进来的参数来查询符合条件的List,不想匹配的字段直接传null即可

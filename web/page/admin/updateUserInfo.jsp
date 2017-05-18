@@ -9,7 +9,7 @@
     pageContext.setAttribute("userInfo",userInfo);
 %>
 <div style="color:black;">
-    <%--TODO:打开的页面的时候默认用户本来的信息--%>
+    <%--打开的页面的时候默认用户本来的信息--%>
     <h1>修改个人信息</h1>
     <form action="/updateUserInfo.action" id="form_updateUserInfo" onsubmit="return checkBeforeUpdateInfo();">
         <table>
