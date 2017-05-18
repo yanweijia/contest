@@ -29,3 +29,13 @@ function logout() {
 function loadContent(url){
     $('#container').load(url);
 }
+
+/**
+ * 右侧container通过iframe加载页面
+ * @param url
+ */
+function loadIFrame(url){
+    $('#container').empty();
+    var html = '<iframe src="'+url+'" style="width:100%;height:100%;" style="border-width:0;"></iframe>';
+    $('#container').append(html);
+}

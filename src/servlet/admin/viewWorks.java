@@ -58,10 +58,12 @@ public class viewWorks extends HttpServlet {
         resultMap.put("matchCount",list.size());
 
         //手动分页,并确保不超过list长度
-        Integer fromIndex = (pageNum-1)*perPage>(list.size()-1)?(list.size()-1):(pageNum-1)*perPage;
-        Integer toIndex = pageNum*perPage>(list.size()-1)?(list.size()-1):pageNum*perPage;
-        resultMap.put("works",list.subList(fromIndex,toIndex).toArray());
-
+        if(list.size()!=0){
+            Integer fromIndex = (pageNum-1)*perPage>(list.size()-1)?(list.size()-1):(pageNum-1)*perPage;
+            Integer toIndex = pageNum*perPage>(list.size()-1)?(list.size()-1):pageNum*perPage;
+            list = list.subList(fromIndex,toIndex);
+        }
+        resultMap.put("works",list.toArray());
         out.print(gson.toJson(resultMap,Map.class));
 
         out.close();

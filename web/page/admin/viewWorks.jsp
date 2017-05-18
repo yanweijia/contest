@@ -58,6 +58,12 @@
             <input type="submit" value="查询" class="btn btn-info"/>
         </div>
     </form>
+    <table id="table_works" border="1" cellspacing="0" bordercolor="gray">
+
+    </table>
+    <div>
+        <%--TODO:翻页按钮--%>
+    </div>
 </div>
 <style type="text/css">
     #form_viewWorks{
@@ -68,6 +74,12 @@
     .checkOption{
         color:gray;
     }
+    #table_works{
+        margin:10px 0;
+    }
+    #table_works th,td{
+        padding:5px 10px;
+    }
 </style>
 <script type="text/javascript">
     function checkBeforeViewWorks(){
@@ -76,10 +88,41 @@
             if(!data.result){
                 alert(data.reason);
             }else{
-                //TODO:查询到数据
+                //显示查询到数据
+                showWorks(data);
             }
         });
 
         return false;
     }
+
+    /**
+     * 显示已经查询到的结果
+     * @param json
+     */
+    function showWorks(json){
+        $('#table_works').empty();
+        var table_header = '<tr style="text-align:center;"><th>赛季</th><th>作品编号</th><th>所属学校</th><th>作品名称</th><th>参赛类型</th><th>作品分类</th><th>所属学院</th><th>带队教师</th><th>教师电话</th></tr>';
+        $('#table_works').append(table_header);
+        if(json.works.length==0){
+            var table_tr = '<tr><td colspan="' + $('#table_works:first').find('th').length + '">筛选结果为空!</td></tr>';
+            $('#table_works').append(table_tr);
+        }else{
+            for(var i = 0 ; i < json.works.length; i++){
+                var table_tr = '<tr><td>' + json.works[i].season
+                    + '</td><td>' + json.works[i].wid
+                    + '</td><td>' + json.works[i].sid
+                    + '</td><td>' + json.works[i].name
+                    + '</td><td>' + json.works[i].majortype
+                    + '</td><td>' + json.works[i].category
+                    + '</td><td>' + json.works[i].college
+                    + '</td><td>' + json.works[i].teachername
+                    + '</td><td>' + json.works[i].teacherphone
+                    + '</td></tr>';
+                $('#table_works').append(table_tr);
+            }
+        }
+
+    }
+
 </script>

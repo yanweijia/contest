@@ -32,7 +32,7 @@
         <dl class="">
             <dt>新闻管理<img src=""></dt>
             <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/noticeManage.jsp')">新闻管理</a></dd>
-            <dd><a href="#" onclick="loadContent('page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
+            <dd><a href="#" onclick="loadIFrame('page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
         </dl>
         <dl class="">
             <dt>学校管理<img src=""></dt>

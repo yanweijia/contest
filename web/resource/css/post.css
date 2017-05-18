@@ -1,5 +1,9 @@
 /* Style the form with a coloured background (and a gradient for Gecko/WebKit browsers), along with curved corners and a drop shadow */
 
+body{
+    margin: 0 auto;
+}
+
 .noticeBackground {
 
     margin: 0 auto;

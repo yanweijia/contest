@@ -51,6 +51,7 @@
             <p>请输入新闻内容</p>
         </script>
         <script type="text/javascript">
+                UE.delEditor('noticeContent');
             var ueditor = UE.getEditor('noticeContent', { initialFrameWidth: null });  //实例化编辑器,宽度自适应
         </script>
 
