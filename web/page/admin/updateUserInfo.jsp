@@ -1,5 +1,13 @@
 <%@ page import="utils.DateUtils" %>
+<%@ page import="entity.UserInfo" %>
+<%@ page import="dao.UserInfoDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    UserInfo userInfo = new UserInfo();
+    userInfo.setUid(((Integer)session.getAttribute("uid")).longValue());
+    userInfo = UserInfoDao.queryUserInfo(userInfo,1,1).get(0);
+    pageContext.setAttribute("userInfo",userInfo);
+%>
 <div style="color:black;">
     <%--TODO:打开的页面的时候默认用户本来的信息--%>
     <h1>修改个人信息</h1>
@@ -10,7 +18,7 @@
                     <strong>邮箱:</strong>
                 </td>
                 <td>
-                    <input type="email" name="email" minlength="5" maxlength="30" placeholder="电子邮箱" value="" required/>
+                    <input type="email" name="email" minlength="5" maxlength="30" placeholder="电子邮箱" value="${userInfo.email}" required/>
                 </td>
             </tr>
             <tr>
@@ -18,7 +26,7 @@
                     <strong>联系电话:</strong>
                 </td>
                 <td>
-                    <input type="tel" name="phone" minlength="5" maxlength="14" placeholder="移动电话号码" required/>
+                    <input type="tel" name="phone" minlength="5" maxlength="14" value="${userInfo.phone}" placeholder="移动电话号码" required/>
                 </td>
             </tr>
             <tr>
@@ -26,7 +34,7 @@
                     <strong>身份证:</strong>
                 </td>
                 <td>
-                    <input type="text" name="idcard" id="idcard" minlength="18" maxlength="18" placeholder="身份证号" required/>
+                    <input type="text" name="idcard" id="idcard" minlength="18" maxlength="18" value="${userInfo.idcard}" placeholder="身份证号" required/>
                 </td>
             </tr>
             <tr>
@@ -35,9 +43,9 @@
                 </td>
                 <td>
                     <select name="sex">
-                        <option value="男">男</option>
-                        <option value="女">女</option>
-                        <option value="未知">未知</option>
+                        <option value="男" ${(userInfo.sex eq "男")?"selected":""}>男</option>
+                        <option value="女" ${(userInfo.sex eq "女")?"selected":""}>女</option>
+                        <option value="未知" ${(userInfo.sex eq "未知")?"selected":""}>未知</option>
                     </select>
                 </td>
             </tr>
@@ -46,7 +54,7 @@
                     <strong>姓名:</strong>
                 </td>
                 <td>
-                    <input type="text" name="name" minlength="1" maxlength="15" placeholder="您的姓名" required/>
+                    <input type="text" name="name" minlength="1" maxlength="15" value="${userInfo.name}" placeholder="您的姓名" required/>
                 </td>
             </tr>
             <tr>

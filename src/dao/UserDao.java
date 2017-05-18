@@ -2,6 +2,7 @@ package dao;
 
 import db.DBAccess;
 import entity.User;
+import entity.UserInfo;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -192,6 +193,9 @@ public class UserDao {
             sqlSession.commit();
             sqlSession.close();
         }
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUid(user.getUid());
+        UserInfoDao.newUserInfo(userInfo);
         return Integer.parseInt(""+user.getUid());
     }
 

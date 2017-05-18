@@ -4,7 +4,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="User">
+<mapper namespace="UserInfo">
 
     <resultMap type="entity.UserInfo" id="UserInfoResult">
         <id column="uid" jdbcType="INTEGER" property="uid"/>
@@ -14,6 +14,41 @@
         <result column="sex" jdbcType="VARCHAR" property="sex"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
     </resultMap>
+
+    <!--查询用户信息-->
+    <select id="queryUserInfo" parameterType="java.util.Map" resultMap="UserInfoResult">
+        SELECT uid,email,phone,idcard,sex,name FROM user_info
+        <where>
+            <if test="userInfo.uid!=null">
+                AND uid=#{userInfo.uid}
+            </if>
+            <if test="userInfo.email!=null">
+                AND email LIKE '%' #{userInfo.email} '%'
+            </if>
+            <if test="userInfo.phone!=null">
+                AND phone=#{userInfo.phone}
+            </if>
+            <if test="userInfo.idcard!=null">
+                AND idcard=#{userInfo.idcard}
+            </if>
+            <if test="userInfo.sex!=null">
+                AND sex=#{userInfo.sex}
+            </if>
+            <if test="userInfo.name!=null">
+                AND name LIKE '%' #{userInfo.name} '%'
+            </if>
+        </where>
+        LIMIT
+        <choose>
+            <when test="pageNum != null ">${(pageNum-1)*perPage}</when>
+            <when test="pageNum == null">0</when>
+        </choose>
+        ,
+        <choose>
+            <when test="perPage!=null">${perPage}</when>
+            <when test="perPage==null">100</when>
+        </choose>
+    </select>
 
 
     <!--更新用户信息-->

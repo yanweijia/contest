@@ -6,11 +6,37 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by weijia on 2017-05-04.
  */
 public class UserInfoDao {
     private static final Logger logger = LogManager.getLogger(UserInfoDao.class);
+
+
+    /**
+     * 查询用户信息
+     * @param userInfo 用户信息,对应项为空则不赋值
+     * @param perPage 结果每页个数
+     * @param pageNum 结果第几页
+     * @return
+     */
+    public static List<UserInfo> queryUserInfo(UserInfo userInfo,Integer perPage,Integer pageNum){
+        List<UserInfo> list = null;
+        Map<String,Object> map = new HashMap<>();
+        map.put("userInfo",userInfo);
+        map.put("perPage",perPage);
+        map.put("pageNum",pageNum);
+        SqlSession sqlSession = null;
+        sqlSession = DBAccess.getSqlSession();
+        list = sqlSession.selectList("UserInfo.queryUserInfo",map);
+        sqlSession.close();
+        return list;
+    }
+
 
 
 //    /**没必要写,直接删除user表,对应会被删除

@@ -32,18 +32,18 @@
 
 
     <!--获取符合条件的用户列表-->
-    <select id="queryUsers" parameterType="entity.User" resultMap="UserResult">
+    <select id="queryUsers" parameterType="java.util.Map" resultMap="UserResult">
         SELECT uid,username,password,type FROM user
         <if test="_parameter!=null">
             <where>
-                <if test="type!=null">
-                    AND type=#{type}
+                <if test="user.type!=null">
+                    AND type=#{user.type}
                 </if>
-                <if test="uid!=null">
-                    AND uid=#{uid}
+                <if test="user.uid!=null">
+                    AND uid=#{user.uid}
                 </if>
-                <if test="username!=null">
-                    AND username LIKE '%' #{username} '%'
+                <if test="user.username!=null">
+                    AND username LIKE '%' #{user.username} '%'
                 </if>
             </where>
         </if>
