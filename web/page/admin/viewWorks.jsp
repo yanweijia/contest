@@ -102,7 +102,7 @@
      */
     function showWorks(json){
         $('#table_works').empty();
-        var table_header = '<tr style="text-align:center;"><th>赛季</th><th>作品编号</th><th>所属学校</th><th>作品名称</th><th>参赛类型</th><th>作品分类</th><th>所属学院</th><th>带队教师</th><th>教师电话</th></tr>';
+        var table_header = '<tr style="text-align:center;"><th>赛季</th><th>作品编号</th><th>所属学校</th><th>作品名称</th><th>参赛类型</th><th>作品分类</th><th>所属学院</th><th>带队教师</th><th>教师电话</th><th>操作</th></tr>';
         $('#table_works').append(table_header);
         if(json.works.length==0){
             var table_tr = '<tr><td colspan="' + $('#table_works:first').find('th').length + '">筛选结果为空!</td></tr>';
@@ -118,6 +118,7 @@
                     + '</td><td>' + json.works[i].college
                     + '</td><td>' + json.works[i].teachername
                     + '</td><td>' + json.works[i].teacherphone
+                    + '</td><td>' + '查看&nbsp;' + '更新&nbsp;' + '删除'
                     + '</td></tr>';
                 $('#table_works').append(table_tr);
             }

@@ -3,20 +3,21 @@
 }
 .notice-title{
     margin-top:10px;
-    width:90%;
+    width:100%;
 }
 .notice-metas{
     color:gray;
-    width:90%;
+    width:100%;
 }
 .notice-content{
     margin: 0 auto;
     margin-top:20px;
-    width:90%;
+    width:100%;
+    text-align:left;
 }
 .hr-gray{
     border:1px solid #EEE;
-    width:90%;
+    width:100%;
 }
 .inline{
     display:inline-block;

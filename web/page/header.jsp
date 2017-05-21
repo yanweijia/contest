@@ -1,5 +1,6 @@
 <%@ page import="utils.NetUtils" %>
-<%@ page import="utils.DateUtils" %><%--
+<%@ page import="utils.DateUtils" %>
+<%@ page import="utils.ConfigUtils" %><%--
   Created by IntelliJ IDEA.
   User: weijia
   Date: 2017-05-08
@@ -13,7 +14,7 @@
             <div class="titleNav">
                 <a href="<%=NetUtils.getBasePath(request)%>">
                     <span class="header-title">
-                        大学生计算机应用能力大赛
+                        <%=ConfigUtils.getString("websiteName","大学生计算机应用能力大赛") %>
                     </span>
                 </a>
                 <div class="navbar-header">
