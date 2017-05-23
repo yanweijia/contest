@@ -47,7 +47,7 @@
         <label class="label" style='display:block;padding-bottom:5px;'>新闻内容:</label>
         </span>
 
-        <script type="text/plain" id="noticeContent" style="width:100%;height:200px;">
+        <script type="text/plain" id="noticeContent" style="width:100%;height:50%;">
             <p>请输入新闻内容</p>
         </script>
         <script type="text/javascript">

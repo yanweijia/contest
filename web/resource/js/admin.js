@@ -36,6 +36,6 @@ function loadContent(url){
  */
 function loadIFrame(url){
     $('#container').empty();
-    var html = '<iframe src="'+url+'" style="width:100%;height:100%;" style="border-width:0;"></iframe>';
+    var html = '<iframe src="'+url+'" style="width:100%;height:100%;border-width:0;" style="border-width:0;"></iframe>';
     $('#container').append(html);
 }

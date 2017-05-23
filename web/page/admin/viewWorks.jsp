@@ -1,4 +1,5 @@
 <%@ page import="utils.DateUtils" %>
+<%@ page import="utils.NetUtils" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div style="color:black;">
     <h1>作品浏览&amp;导出</h1>
@@ -56,7 +57,9 @@
         <div style="text-align:center;">
             <input type="reset" value="重设" class="btn btn-info"/>
             <input type="submit" value="查询" class="btn btn-info"/>
+            <input type="button" value="导出Excel" class="btn btn-info" onclick="downloadExcel();"/>
         </div>
+        <input type="hidden" name="method" id="submit_method" value=""/>
     </form>
     <table id="table_works" border="1" cellspacing="0" bordercolor="gray">
 
@@ -82,7 +85,22 @@
     }
 </style>
 <script type="text/javascript">
+
+
+    /**
+     * 将符合条件的结果输出到excel再进行下载
+     */
+    function downloadExcel(){
+        $('#submit_method').val('download');
+        window.open('<%=NetUtils.getBasePath(request) %>viewWorks.action?'+$('#form_viewWorks').serialize());
+    }
+
+
+    /**
+     *  验证数据斌显示数据
+     */
     function checkBeforeViewWorks(){
+        $('#submit_method').val('query');
         $.post('/viewWorks.action',$('#form_viewWorks').serialize(),function(data){
             data = eval('('+data+')');
             if(!data.result){
