@@ -44,5 +44,20 @@ function checkAndSubmit(){
     form.appendChild(inputAuthor);
     form.appendChild(inputContent);
     form.appendChild(inputType);
-    form.submit();
+
+    //form.submit(); /*用下面的ajax技术来提交新闻,这样不会刷新页面*/
+    $.post($('#postNoticeForm').attr('action'),$('#postNoticeForm').serialize(),function(data){
+        data = eval('('+data+')');
+        if(data.result){
+            alert('发送新闻成功!');
+            //清空输入框
+            $('#noticeTitle').val('');
+            $('#noticeAuthor').val('');
+            ueditor.setContent('要不要再发布一篇新闻呢?');
+        }else{
+            alert(data.reason);
+        }
+    });
+
+
 }

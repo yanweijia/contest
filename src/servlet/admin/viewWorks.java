@@ -7,6 +7,7 @@ import entity.Works;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utils.CodeUtils;
+import utils.DateUtils;
 import utils.NetUtils;
 import utils.POIUtils;
 
@@ -126,7 +127,7 @@ public class viewWorks extends HttpServlet {
 
 //        response.setContentLength();// 写明要下载的文件的大小,无法估计,所以不写.浏览器下载时不会提示文件大小.
         response.setHeader("Content-Disposition", "attachment;filename="
-                + CodeUtils.URLEncode("大赛作品信息导出.xls"));// 设置在下载框默认显示的文件名,如果是中文名称的话需要URL编码
+                + CodeUtils.URLEncode("大赛作品信息导出_") + DateUtils.getDateTime() + ".xls");// 设置在下载框默认显示的文件名,如果是中文名称的话需要URL编码
         response.setContentType("application/x-msdownload");// 指明response的返回对象是文件流
         String[] header = {"赛季","作品编号","所属学校","作品名称","参赛类型","作品分类","所属学院","带队教师","教师电话"};
         List<Object[]> content = new ArrayList<>();
