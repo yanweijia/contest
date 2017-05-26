@@ -129,7 +129,7 @@
             for(var i = 0 ; i < json.works.length; i++){
                 var table_tr = '<tr><td>' + json.works[i].season
                     + '</td><td>' + json.works[i].wid
-                    + '</td><td>' + json.works[i].sid
+                    + '</td><td>' + json.works[i].schoolname
                     + '</td><td>' + json.works[i].name
                     + '</td><td>' + json.works[i].majortype
                     + '</td><td>' + json.works[i].category

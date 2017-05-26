@@ -18,6 +18,22 @@ public class SchoolInfoDao {
 
 
     /**
+     * 获取学校信息,通过学校编号
+     * @param sid
+     * @return
+     */
+    public static SchoolInfo getSchoolInfoByID(Integer sid){
+        Map<String,Object> map = new HashMap<>();
+        map.put("sid",sid);
+        List<SchoolInfo> list =  DBAccess.selectList("SchoolInfo.querySchoolInfo",map);
+        if(list.size()!=0){
+            return list.get(0);
+        }else {
+            return new SchoolInfo();
+        }
+    }
+
+    /**
      * 根据条件获取学校信息
      * @param name 学校名称,可空,支持模糊查询
      * @param perPage 每页结果个数

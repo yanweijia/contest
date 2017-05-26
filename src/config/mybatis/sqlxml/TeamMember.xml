@@ -53,7 +53,7 @@
 
     <!--查询符合条件的TeamMember-->
     <select id="queryTeamMember" parameterType="java.util.Map" resultMap="TeamMemberResult">
-        SELECT mid,wid,name,idcard,college,major,grade,email,phone FROM team_member
+        SELECT mid,wid,name,idcard,college,major,grade,email,phone,age FROM team_member
         <if test="_parameter!=null">
             <where>
                 <if test="teamMember.mid!=null">

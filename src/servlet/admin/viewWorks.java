@@ -2,7 +2,10 @@ package servlet.admin;
 
 
 import com.google.gson.Gson;
+import dao.SchoolInfoDao;
+import dao.TeamMemberDao;
 import dao.WorksDao;
+import entity.TeamMember;
 import entity.Works;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -112,7 +115,22 @@ public class viewWorks extends HttpServlet {
             Integer toIndex = pageNum*perPage>(list.size()-1)?(list.size()-1):pageNum*perPage;
             list = list.subList(fromIndex,toIndex);
         }
-        resultMap.put("works",list.toArray());
+        List<Map<String,Object>> myList = new ArrayList<>();
+        for(Works work:list){
+            Map<String,Object> tempMap = new HashMap<>();
+            tempMap.put("season",work.getSeason().substring(0,4));
+            tempMap.put("wid",work.getWid());
+            //学校名称
+            tempMap.put("schoolname",SchoolInfoDao.getSchoolInfoByID(work.getSid().intValue()).getName());
+            tempMap.put("name",work.getName());
+            tempMap.put("majortype",work.getMajortype());
+            tempMap.put("category",work.getCategory());
+            tempMap.put("college",work.getCollege());
+            tempMap.put("teachername",work.getTeachername());
+            tempMap.put("teacherphone",work.getTeacherphone());
+            myList.add(tempMap);
+        }
+        resultMap.put("works",myList);
         out.print(gson.toJson(resultMap,Map.class));
 
         out.close();
@@ -129,21 +147,39 @@ public class viewWorks extends HttpServlet {
         response.setHeader("Content-Disposition", "attachment;filename="
                 + CodeUtils.URLEncode("大赛作品信息导出_") + DateUtils.getDateTime() + ".xls");// 设置在下载框默认显示的文件名,如果是中文名称的话需要URL编码
         response.setContentType("application/x-msdownload");// 指明response的返回对象是文件流
-        String[] header = {"赛季","作品编号","所属学校","作品名称","参赛类型","作品分类","所属学院","带队教师","教师电话"};
+        String[] header = {"赛季","作品编号","所属学校","作品名称","参赛类型","作品分类","所属学院","带队教师","教师电话",
+                            "队员姓名","身份证号","学院","专业","年级","邮箱","手机","年龄",
+                            "队员姓名","身份证号","学院","专业","年级","邮箱","手机","年龄",
+                            "队员姓名","身份证号","学院","专业","年级","邮箱","手机","年龄"};
         List<Object[]> content = new ArrayList<>();
         for(Works works : list){
-            Object[] item = {
-                    works.getSeason(),
-                    works.getWid(),
-                    works.getSid(),
-                    works.getName(),
-                    works.getMajortype(),
-                    works.getCategory(),
-                    works.getCollege(),
-                    works.getTeachername(),
-                    works.getTeacherphone()
-            };
-            content.add(item);
+            List<Object> item = new ArrayList<>();
+            item.add(works.getSeason().substring(0,4));
+            item.add(works.getWid());
+            //把sid换为name
+            item.add(SchoolInfoDao.getSchoolInfoByID(works.getSid().intValue()).getName());
+            item.add(works.getName());
+            item.add(works.getMajortype());
+            item.add(works.getCategory());
+            item.add(works.getCollege());
+            item.add(works.getTeachername());
+            item.add(works.getTeacherphone());
+
+            //将队员信息也导入到excel里面
+            TeamMember teamMember = new TeamMember();
+            teamMember.setWid(works.getWid());
+            List<TeamMember> teamMemberList = TeamMemberDao.queryTeamMember(teamMember,3,1);
+            for(TeamMember temp:teamMemberList){
+                item.add(temp.getName());
+                item.add(temp.getIdcard());
+                item.add(temp.getCollege());
+                item.add(temp.getMajor());
+                item.add(temp.getGrade());
+                item.add(temp.getEmail());
+                item.add(temp.getPhone());
+                item.add(temp.getAge());
+            }
+            content.add(item.toArray());
         }
 
         //开始下载到输出流
