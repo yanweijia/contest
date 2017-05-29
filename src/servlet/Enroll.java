@@ -26,7 +26,7 @@ import java.util.Map;
 
 /**
  * Created by weijia on 2017-05-04.
- * 提交报名信息,method分为new和update
+ * 提交报名信息,method分为new和update,delete
  */
 @WebServlet(name = "Enroll",value="/enroll.action")
 public class Enroll extends HttpServlet {
@@ -42,6 +42,18 @@ public class Enroll extends HttpServlet {
             NetUtils.writeResultToBrowser(out,false,"未获取到参数,提交/更新 报名表失败!");
             return;
         }
+
+
+        //删除作品信息
+        if("delete".equals(method)){
+            WorksDao.deleteBatch(readWidList(request));
+            NetUtils.writeResultToBrowser(out,true,"删除成功!");
+            return;
+        }
+
+
+
+
 
         //从参数构建报名信息
         Works works = readWorks(request);
@@ -91,12 +103,28 @@ public class Enroll extends HttpServlet {
             NetUtils.writeResultToBrowser(out,true,"更新作品信息成功!");
             return;
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
     }
+
+
+    /**
+     * 从request中读取wid数组信息并封装成list
+     * @param request
+     * @return
+     */
+    private static List<Integer> readWidList(HttpServletRequest request){
+        List<Integer> list = new ArrayList<>();
+        String[] wids = request.getParameterValues("wid");
+        for(String str:wids){
+            list.add(Integer.parseInt(str));
+        }
+        return list;
+    }
+
+
 
 
     /**

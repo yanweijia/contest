@@ -68,6 +68,33 @@
         <%--TODO:翻页按钮--%>
     </div>
 </div>
+
+
+<%--这是弹出窗口查看或修改报名表信息的--%>
+<div class="modal fade" id="model_previous" tabindex="-1" role="dialog" aria-labelledby="model_previousLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 90%;width: 800px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="model_previousLabel">查看/修改报名表</h4>
+            </div>
+            <div class="modal-body" id="container_work">
+                这里放弹出窗口内容,不要乱动!
+            </div>
+            <div class="modal-footer">
+                <div class="right-side">
+                    <button type="button" class="btn btn-danger btn-simple" data-dismiss="modal">确定</button>
+                </div>
+                <div class="divider"></div>
+                <div class="left-side">
+                    <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <style type="text/css">
     #form_viewWorks{
         display:inline-block;/*下面三行css确保宽度div宽度随容器自适应*/
@@ -82,6 +109,10 @@
     }
     #table_works th,td{
         padding:5px 10px;
+    }
+    #table_works span{
+        color:blue;
+        cursor:pointer;
     }
 </style>
 <script type="text/javascript">
@@ -136,12 +167,44 @@
                     + '</td><td>' + json.works[i].college
                     + '</td><td>' + json.works[i].teachername
                     + '</td><td>' + json.works[i].teacherphone
-                    + '</td><td>' + '查看&nbsp;' + '更新&nbsp;' + '删除'
+                    + '</td><td>' + '<span data-toggle="modal" data-target="#model_previous" onclick="viewWork(' + json.works[i].wid + ');">查看</span>&nbsp;'
+                                    + '<span data-toggle="modal" data-target="#model_previous" onclick="updateWork(' + json.works[i].wid + ');">更新</span>&nbsp;'
+                                    + '<span onclick="deleteWork(' + json.works[i].wid + ');">删除</span>'
                     + '</td></tr>';
                 $('#table_works').append(table_tr);
             }
         }
 
+    }
+
+    /**
+     * 查看报名信息
+     * @param wid 报名编号
+     */
+    function viewWork(wid){
+        $('#model_previousLabel').html('查看报名信息');
+        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp');
+    }
+
+    /**
+     * 更新报名信息
+     * @param wid
+     */
+    function updateWork(wid){
+        $('#model_previousLabel').html('更新报名信息');
+        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp');
+    }
+
+    function deleteWork(wid){
+        if(confirm('确认要删除吗?')){
+            $.post('<%=NetUtils.getBasePath(request) %>enroll.action','method=delete&wid='+wid,function(data){
+                data = eval('('+data+')');
+                if(data.result){
+                    alert('删除成功!');
+                }else
+                    alert(data.reason);
+            });
+        }
     }
 
 </script>
