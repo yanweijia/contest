@@ -117,6 +117,16 @@ public class viewWorks extends HttpServlet {
         }
         List<Map<String,Object>> myList = new ArrayList<>();
         for(Works work:list){
+
+            //获取参赛学生名称
+            TeamMember teamMember = new TeamMember();
+            teamMember.setWid(work.getWid());
+            String students = "";
+            List<TeamMember> teamMemberList = TeamMemberDao.queryTeamMember(teamMember,3,1);
+            for(TeamMember temp:teamMemberList){
+                students += " " + temp.getName();
+            }
+
             Map<String,Object> tempMap = new HashMap<>();
             tempMap.put("season",work.getSeason().substring(0,4));
             tempMap.put("wid",work.getWid());
@@ -127,7 +137,7 @@ public class viewWorks extends HttpServlet {
             tempMap.put("category",work.getCategory());
             tempMap.put("college",work.getCollege());
             tempMap.put("teachername",work.getTeachername());
-            tempMap.put("teacherphone",work.getTeacherphone());
+            tempMap.put("students",students);
             myList.add(tempMap);
         }
         resultMap.put("works",myList);

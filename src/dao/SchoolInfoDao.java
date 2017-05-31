@@ -52,6 +52,25 @@ public class SchoolInfoDao {
 
 
     /**
+     * 根据条件获取学校信息
+     * @param sid 学校编号,可空
+     * @param name 学校名称,可空,支持模糊
+     * @param uid 学校负责人编号,可空
+     * @param perPage 每页结果个数
+     * @param pageNum 当前页数
+     * @return
+     */
+    public static List<SchoolInfo> querySchoolInfo(Long sid,String name,Long uid,Integer perPage,Integer pageNum){
+        Map<String,Object> map = new HashMap<>();
+        map.put("sid",sid);
+        map.put("name",name);
+        map.put("uid",uid);
+        map.put("perPage",perPage);
+        map.put("pageNum",pageNum);
+        return DBAccess.selectList("SchoolInfo.querySchoolInfo",map);
+    }
+
+    /**
      * 更新学校信息
      * @param sid 学校编号
      * @param name 学校新名称,可空

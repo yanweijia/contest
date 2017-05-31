@@ -19,8 +19,11 @@
             <if test="name!=null &amp;&amp; &quot;&quot;.equals(name.trim())">
                 AND name LIKE '%' #{name} '%'
             </if>
-            <if test="id!=null">
+            <if test="sid!=null">
                 AND sid=#{sid}
+            </if>
+            <if test="uid!=null">
+                AND uid=#{uid}
             </if>
         </where>
 

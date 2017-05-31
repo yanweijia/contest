@@ -151,7 +151,7 @@
      */
     function showWorks(json){
         $('#table_works').empty();
-        var table_header = '<tr style="text-align:center;"><th>赛季</th><th>作品编号</th><th>所属学校</th><th>作品名称</th><th>参赛类型</th><th>作品分类</th><th>所属学院</th><th>带队教师</th><th>教师电话</th><th>操作</th></tr>';
+        var table_header = '<tr style="text-align:center;"><th>赛季</th><th>作品编号</th><th>所属学校</th><th>作品名称</th><th>参赛类型</th><th>作品分类</th><th>所属学院</th><th>带队教师</th><th>参赛学生</th><th>操作</th></tr>';
         $('#table_works').append(table_header);
         if(json.works.length==0){
             var table_tr = '<tr><td colspan="' + $('#table_works:first').find('th').length + '">筛选结果为空!</td></tr>';
@@ -166,7 +166,7 @@
                     + '</td><td>' + json.works[i].category
                     + '</td><td>' + json.works[i].college
                     + '</td><td>' + json.works[i].teachername
-                    + '</td><td>' + json.works[i].teacherphone
+                    + '</td><td>' + json.works[i].students
                     + '</td><td>' + '<span data-toggle="modal" data-target="#model_previous" onclick="viewWork(' + json.works[i].wid + ');">查看</span>&nbsp;'
                                     + '<span data-toggle="modal" data-target="#model_previous" onclick="updateWork(' + json.works[i].wid + ');">更新</span>&nbsp;'
                                     + '<span onclick="deleteWork(' + json.works[i].wid + ');">删除</span>'
@@ -183,7 +183,7 @@
      */
     function viewWork(wid){
         $('#model_previousLabel').html('查看报名信息');
-        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp');
+        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp?method=query&wid='+wid);
     }
 
     /**
@@ -192,7 +192,7 @@
      */
     function updateWork(wid){
         $('#model_previousLabel').html('更新报名信息');
-        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp');
+        $('#container_work').load('<%=NetUtils.getBasePath(request) %>page/admin/enrollment_table.jsp?method=update&wid='+wid);
     }
 
     function deleteWork(wid){
@@ -201,6 +201,7 @@
                 data = eval('('+data+')');
                 if(data.result){
                     alert('删除成功!');
+                    checkBeforeViewWorks();
                 }else
                     alert(data.reason);
             });

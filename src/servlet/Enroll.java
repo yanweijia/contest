@@ -91,7 +91,10 @@ public class Enroll extends HttpServlet {
                 sqlSession = DBAccess.getSqlSession();
                 WorksDao.updateWorks(works,sqlSession);
                 for(TeamMember teamMember:teamMembersList){
-                    TeamMemberDao.updateTeamMember(teamMember,sqlSession);
+                    if(teamMember.getMid()!=0)
+                        TeamMemberDao.updateTeamMember(teamMember,sqlSession);
+                    else
+                        TeamMemberDao.newTeamMember(teamMember,sqlSession); //如果此次更改报名表的时候新增队员信息,那么将这个信息也插入到数据库中.
                 }
                 sqlSession.commit();
             }catch(Exception e){
