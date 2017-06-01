@@ -42,9 +42,8 @@
 
         <dl class="">
             <dt>用户管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">用户查询</a></dd>
+            <dd class="first_dd"><a href="#">用户查询&amp;维护</a></dd>
             <dd><a href="#">新增用户</a></dd>
-            <dd><a href="#">用户信息维护</a></dd>
         </dl>
 
         <dl class="">

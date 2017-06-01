@@ -12,8 +12,8 @@
         </label>
         <label for="school">
             学校名称:
-            <input type="text" name="school" id="school" placeholder="支持模糊查询" ${(type ne "管理员")?"readonly":""}
-                   value="<%=("管理员".equals(""+session.getAttribute("type")))?(""):(SchoolInfoDao.querySchoolInfo(null,null,(Long)session.getAttribute("uid"),1,1).get(0).getName()) %>"
+            <input type="text" name="school" id="school" placeholder="支持模糊查询" ${(type eq "学校负责人")?"readonly":""}
+                   value="<%=("学校负责人".equals(""+session.getAttribute("type")))?(SchoolInfoDao.querySchoolInfo(null,null,(Long)session.getAttribute("uid"),1,1).get(0).getName()):("") %>"
             />
 
         </label>
