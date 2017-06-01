@@ -1,5 +1,6 @@
 <%@ page import="utils.DateUtils" %>
 <%@ page import="utils.NetUtils" %>
+<%@ page import="dao.SchoolInfoDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div style="color:black;">
     <h1>作品浏览&amp;导出</h1>
@@ -11,7 +12,10 @@
         </label>
         <label for="school">
             学校名称:
-            <input type="text" name="school" id="school" placeholder="支持模糊查询"/>
+            <input type="text" name="school" id="school" placeholder="支持模糊查询" ${(type ne "管理员")?"readonly":""}
+                   value="<%=("管理员".equals(""+session.getAttribute("type")))?(""):(SchoolInfoDao.querySchoolInfo(null,null,(Long)session.getAttribute("uid"),1,1).get(0).getName()) %>"
+            />
+
         </label>
         <label for="name">
             作品名称:

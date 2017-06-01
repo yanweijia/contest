@@ -44,7 +44,7 @@ public class login extends HttpServlet {
             if(password.equals(user.getPassword())){
                 //登录成功
                 session.setAttribute("valid",true);
-                session.setAttribute("uid",Integer.parseInt(""+user.getUid()));
+                session.setAttribute("uid",Long.parseLong(""+user.getUid()));
                 session.setAttribute("type",user.getType());
                 session.setAttribute("username",user.getUsername());
                 NetUtils.writeResultToBrowser(out,true,"登录成功!");

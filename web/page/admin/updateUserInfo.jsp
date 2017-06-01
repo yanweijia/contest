@@ -4,7 +4,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UserInfo userInfo = new UserInfo();
-    userInfo.setUid(((Integer)session.getAttribute("uid")).longValue());
+    userInfo.setUid((Long)session.getAttribute("uid"));
     userInfo = UserInfoDao.queryUserInfo(userInfo,1,1).get(0);
     pageContext.setAttribute("userInfo",userInfo);
 %>

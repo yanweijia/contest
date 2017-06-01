@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>(管理员)后台管理 - 上海市大学生应用能力技术大赛</title>
+    <title>(学校负责人)后台管理 - 上海市大学生应用能力技术大赛</title>
     <meta name="author" content="weijia"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <jsp:include page="/plug-in/paper-kit-style/css.jsp"/>
@@ -22,29 +22,6 @@
         <br/>
         <dl class="">
             <dt onclick="loadContent('page/admin/welcome.jsp')">欢迎页面<img src=""></dt>
-        </dl>
-
-        <dl class="">
-            <dt>网站设置<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/sliderConfig.jsp')">首页slider维护</a></dd>
-            <dd><a href="#" onclick="loadContent('page/admin/admin/websiteConfig.jsp');">网站配置</a></dd>
-        </dl>
-        <dl class="">
-            <dt>新闻管理<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/noticeManage.jsp')">新闻管理</a></dd>
-            <dd><a href="#" onclick="loadIFrame('page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
-        </dl>
-        <dl class="">
-            <dt>学校管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">学校查询&amp;维护</a></dd>
-            <dd><a href="#">新增学校</a></dd>
-        </dl>
-
-        <dl class="">
-            <dt>用户管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">用户查询</a></dd>
-            <dd><a href="#">新增用户</a></dd>
-            <dd><a href="#">用户信息维护</a></dd>
         </dl>
 
         <dl class="">
