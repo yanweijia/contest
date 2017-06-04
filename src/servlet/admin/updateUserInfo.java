@@ -33,8 +33,8 @@ public class updateUserInfo extends HttpServlet {
             out.close();
             return;
         }
-        Integer uid = (Integer)session.getAttribute("uid");
-        UserInfo userInfo = new UserInfo(uid.longValue(),email,phone,idcard,sex,name);
+        Long uid = (Long)session.getAttribute("uid");
+        UserInfo userInfo = new UserInfo(uid,email,phone,idcard,sex,name);
         if(UserInfoDao.updateUserInfo(userInfo)){
             NetUtils.writeResultToBrowser(out,true,"修改用户信息成功!");
         }else{

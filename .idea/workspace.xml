@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/sliderOperate.java" afterPath="$PROJECT_DIR$/src/servlet/sliderOperate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test.java" afterPath="$PROJECT_DIR$/src/test/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/admin/admin.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/admin/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/admin/changePassword.java" afterPath="$PROJECT_DIR$/src/servlet/admin/changePassword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java" afterPath="$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp" afterPath="$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sliderConfig.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sliderConfig.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="-1273">
+              <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
               <folding>
                 <marker date="1496543008425" expanded="true" signature="3459:3474" ph="..." />
               </folding>
@@ -119,11 +117,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="updateUserInfo.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sliderOperate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateUserInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePassword.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/admin/changePassword.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -214,13 +242,11 @@
         <option value="$PROJECT_DIR$/web/page/admin/admin/welcome.jsp" />
         <option value="$PROJECT_DIR$/web/page/admin/admin/websiteConfig.jsp" />
         <option value="$PROJECT_DIR$/web/page/admin/changePassword.jsp" />
-        <option value="$PROJECT_DIR$/src/servlet/admin/changePassword.java" />
         <option value="$PROJECT_DIR$/src/dao/UserInfoDao.java" />
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/User.xml" />
         <option value="$PROJECT_DIR$/src/servlet/admin/admin.java" />
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/UserInfo.xml" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
         <option value="$PROJECT_DIR$/web/resource/css/post.css" />
         <option value="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
@@ -246,7 +272,6 @@
         <option value="$PROJECT_DIR$/src/servlet/Enroll.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/principal.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/login.java" />
-        <option value="$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp" />
         <option value="$PROJECT_DIR$/web/page/admin/viewWorks.jsp" />
         <option value="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin/admin.jsp" />
@@ -254,6 +279,9 @@
         <option value="$PROJECT_DIR$/src/test/test.java" />
         <option value="$PROJECT_DIR$/src/servlet/sliderOperate.java" />
         <option value="$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java" />
+        <option value="$PROJECT_DIR$/src/servlet/admin/changePassword.java" />
+        <option value="$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp" />
       </list>
     </option>
   </component>
@@ -1797,14 +1825,7 @@
       <workItem from="1495106968183" duration="81251000" />
       <workItem from="1495875411657" duration="2136000" />
       <workItem from="1495901705740" duration="2949000" />
-      <workItem from="1496028238545" duration="40049000" />
-    </task>
-    <task id="LOCAL-00007" summary="去除ueditor里面的todo标签">
-      <created>1493574035822</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1493574035822</updated>
+      <workItem from="1496028238545" duration="41037000" />
     </task>
     <task id="LOCAL-00008" summary="报名表单设计">
       <created>1493744996920</created>
@@ -2142,11 +2163,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496335966183</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="1.管理员后台删除一些功能&#10;2.后台slider维护正常">
+      <created>1496543059895</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1496543059896</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486055000" />
+    <option name="totallyTimeSpent" value="487043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2169,7 +2197,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49519232" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.122329056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" show_stripe_button="true" weight="0.30694142" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2548807" sideWeight="0.49786323" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2548807" sideWeight="0.49786323" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1474359" sideWeight="0.49436393" order="3" side_tool="false" content_ui="combo" />
@@ -2233,7 +2261,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新建sliderOperate Servlet&#10;修改config.properties和dbcp.properties的编码为UTF-8 防止乱码" />
     <MESSAGE value="首页slider动态获取最新" />
     <MESSAGE value="sliderOperate修改完成" />
     <MESSAGE value="1.header.jsp中加入登录表单&#10;2.header.jsp中表单提交前验证&#10;3.enroll.js表单提交用form自己进行验证,然后用ajax进行提交" />
@@ -2258,7 +2285,8 @@
     <MESSAGE value="报名页面查询后自动显示在表格中" />
     <MESSAGE value="查询导出作品信息页面学校负责人权限限制仅能查询本校" />
     <MESSAGE value="backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup" />
+    <MESSAGE value="1.管理员后台删除一些功能&#10;2.后台slider维护正常" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.管理员后台删除一些功能&#10;2.后台slider维护正常" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2271,30 +2299,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/6b8e6bc4/dbce8d7b-4481-4d71-9b74-77ca35bd8cf1/contest.school_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/6b8e6bc4/dbce8d7b-4481-4d71-9b74-77ca35bd8cf1/contest.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Works.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
@@ -2593,14 +2597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -2688,14 +2684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -2707,13 +2695,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/sliderOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/admin/updateUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/admin/changePassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/page/admin/admin/sliderConfig.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="-1273">
+          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
           <folding>
             <marker date="1496543008425" expanded="true" signature="3459:3474" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/admin/updateUserInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
