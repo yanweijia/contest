@@ -20,7 +20,7 @@
 <link href="<%=NetUtils.getBasePath(request) %>resource/css/post.css" rel="stylesheet" type="text/css" />
 
 
-<%--TODO: JQuery包,后期集成的时候记得去除--%>
+<%--JQuery包,后期集成的时候记得去除--%>
 <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>plug-in/jquery.min.js"></script>
 
 <div class="noticeBackground">

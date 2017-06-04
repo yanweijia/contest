@@ -49,7 +49,7 @@
         <dl class="">
             <dt>作品管理<img src=""></dt>
             <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/viewWorks.jsp')">作品浏览&amp;导出</a></dd>
-            <dd><a href="#" onclick="loadContent('page/admin/enrollment_table.jsp?method=new')">新增作品</a></dd>
+            <%--<dd><a href="#" onclick="loadContent('page/admin/enrollment_table.jsp?method=new')">新增作品</a></dd>--%>
         </dl>
 
         <dl class="">

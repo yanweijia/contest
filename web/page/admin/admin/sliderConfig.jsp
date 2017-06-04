@@ -1,27 +1,48 @@
-<%@ page import="utils.DateUtils" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.google.gson.Gson" %>
+<%@ page import="utils.ConfigUtils" %>
+<%@ page import="java.util.Map" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Gson gson = new Gson();
+    Map<String,String> map_img = gson.fromJson(ConfigUtils.getString("slider.imgs",""),Map.class);
+    Map<String,String> map_url = gson.fromJson(ConfigUtils.getString("slider.urls",""),Map.class);
+    Map<String,String> map_name = gson.fromJson(ConfigUtils.getString("slider.names",""),Map.class);
+    pageContext.setAttribute("map_img",map_img);
+    pageContext.setAttribute("map_url",map_url);
+    pageContext.setAttribute("map_name",map_name);
+
+%>
 <div id="sliderConfigDiv">
 
     <form action="/sliderOperate" method="POST" id="form_sliderConfig" onsubmit="return submitSliderConfig();">
         <h1>sliderConfig:设置首页轮播图片</h1>
+        <input type="hidden" name="method" value="update"/>
+        <input type="hidden" name="count" value="1" id="slidercount"/>
         <table id="table_sliderConfig">
-            <tr>
-                <td style="padding:0 10px;">
-                    <label for="img1">
-                        图片地址:<input type="url" name="img" id="img1" value="" minlength="3" required/>
-                    </label>
-                </td>
-                <td>
-                    <label for="name1">
-                        图片文字:<input type="text" name="name1" id="name1" value=""/>
-                    </label>
-                </td>
-                <td>
-                    <label>
-                        图片链接地址:<input type="text" name="url1" id="url1" minlength="1" placeholder="若无填写#" value="" required/>
-                    </label>
-                </td>
-            </tr>
+            <%
+                for(int i = 1 ; i <= map_img.size();i++){
+            %>
+                <tr>
+                    <td style="padding:0 10px;">
+                        <label for="img<%=i %>">
+                            图片地址:<input type="text" name="img<%=i %>" id="img<%=i %>" value="<%=map_img.get("img"+i) %>" minlength="3" required/>
+                        </label>
+                    </td>
+                    <td>
+                        <label for="name<%=i %>">
+                            图片文字:<input type="text" name="name<%=i %>" id="name<%=i %>" value="<%=map_name.get("name"+i ) %>"/>
+                        </label>
+                    </td>
+                    <td>
+                        <label for="url<%=i %>">
+                            图片链接地址:<input type="text" name="url<%=i %>" id="url<%=i %>" minlength="1" placeholder="若无填写#" value="<%=map_url.get("url"+i) %>" required/>
+                        </label>
+                    </td>
+                </tr>
+            <%
+                }
+            %>
         </table>
         <div style="float:right;">
             <i class="fa fa-minus fa-lg" onclick="removeLastLine(this);"></i>
@@ -59,7 +80,7 @@
      * 移除一行
      */
     function removeLastLine(object){
-        var count = $('#table_sliderConfig').find("tr").length; //获取当前表格行数
+        var count = getCount(); //获取当前表格行数
         if(count == 1){
             alert('再删下去的话首页就没东东啦,不许你删除了!');
         }else {
@@ -72,7 +93,7 @@
      *  添加一行
      */
     function addLine(){
-        var count = $('#table_sliderConfig').find("tr").length; //获取当前表格行数
+        var count = getCount(); //获取当前表格行数
         count++;
         if(count >= 7){
             alert('首页滚动动画是不是有点多了?别添加了吧!');
@@ -92,10 +113,21 @@
     }
 
     /**
+     * 获取当前表格行数
+     * @returns {int}
+     */
+    function getCount(){
+        return $('#table_sliderConfig').find("tr").length;
+    }
+
+
+    /**
      * 提交slider配置信息
      * @returns {boolean}
      */
     function submitSliderConfig(){
+        var count = getCount();
+        $('#slidercount').val(count);
         $.post('/sliderOperate',$('#form_sliderConfig').serialize(),function(data){
             data = eval('(' + data + ')');
             if(data.result){

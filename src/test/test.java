@@ -17,17 +17,6 @@ import java.util.List;
 public class test {
     private static final Logger logger = LogManager.getLogger(test.class);
     public static void main(String[] args){
-        String a = "a";
-        Integer b = null;
-        logger.trace("123");
-        logger.debug("456");
-        logger.info("789");
-        try{
-            b = Integer.parseInt(a);
-        }catch(Exception e){
-            logger.error("parse出错了",e);
-        }
-
-        logger.warn("131415");
+        System.out.println("\\,".replaceAll(",","\\\\,"));
     }
 }

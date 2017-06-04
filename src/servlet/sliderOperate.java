@@ -65,9 +65,9 @@ public class sliderOperate extends HttpServlet {
                 }
                 //写入配置文件.
                 ConfigUtils.setProperty("slider.count",count);
-                ConfigUtils.setProperty("slider.names",gson.toJson(names,Map.class));
-                ConfigUtils.setProperty("slider.urls",gson.toJson(urls,Map.class));
-                ConfigUtils.setProperty("slider.imgs",gson.toJson(imgs,Map.class));
+                ConfigUtils.setProperty("slider.names",gson.toJson(names,Map.class).replaceAll(",","\\\\,"));
+                ConfigUtils.setProperty("slider.urls",gson.toJson(urls,Map.class).replaceAll(",","\\\\,").replaceAll("＃","#"));
+                ConfigUtils.setProperty("slider.imgs",gson.toJson(imgs,Map.class).replaceAll(",","\\\\,"));
                 map.put("result",true);
                 map.put("reason","修改成功");
             }else{
