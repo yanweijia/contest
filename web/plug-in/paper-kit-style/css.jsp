@@ -23,5 +23,5 @@
 <link href="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/css/demo.css" rel="stylesheet" />
         <!--     Fonts and icons     -->
 <link href="<%=NetUtils.getBasePath(request) %>plug-in/paper-kit-style/css/font-awesome.min.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<%--<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>--%>
+<%--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>--%>

@@ -4,7 +4,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div style="color:black;">
     <h1>作品浏览&amp;导出</h1>
-    <form action="/viewWorks.action" id="form_viewWorks" onsubmit="return checkBeforeViewWorks();">
+    <form action="<%=NetUtils.getBasePath(request)%>viewWorks.action" id="form_viewWorks" onsubmit="return checkBeforeViewWorks();">
 
         <label for="season">
             赛季:

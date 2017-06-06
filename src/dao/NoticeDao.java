@@ -132,7 +132,8 @@ public class NoticeDao {
      */
     public static List<Notice> queryNotice(String key,int pageNum,int perPage,String type){
         List<Notice> list = new ArrayList<Notice>();
-        if(type==null || type.equals(""))  type = "";
+        type=(type==null?"":type);
+        key=(key==null?"":key);
         String sql = "SELECT * FROM notice WHERE (title LIKE '%" + key + "%' OR content LIKE '%" + key + "%')" +
                 " AND type LIKE '%" + type + "%' LIMIT " + ((pageNum-1) * perPage) + "," + perPage;
         Connection conn = DBManager.getConnection();
