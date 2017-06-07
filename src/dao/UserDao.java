@@ -195,6 +195,7 @@ public class UserDao {
         }
         UserInfo userInfo = new UserInfo();
         userInfo.setUid(user.getUid());
+        userInfo.setSex("未知");
         UserInfoDao.newUserInfo(userInfo);
         return Integer.parseInt(""+user.getUid());
     }

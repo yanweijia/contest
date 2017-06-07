@@ -42,8 +42,8 @@
 
         <dl class="">
             <dt>用户管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">用户查询&amp;维护</a></dd>
-            <dd><a href="#">新增用户</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/userManage.jsp');">用户查询&amp;维护</a></dd>
+            <dd><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/newUser.jsp');">新增用户</a></dd>
         </dl>
 
         <dl class="">
