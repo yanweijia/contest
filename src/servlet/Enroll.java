@@ -138,15 +138,20 @@ public class Enroll extends HttpServlet {
     private static List<TeamMember> readTeamMembers(HttpServletRequest request){
         List<TeamMember> list = new ArrayList<>();
 
-        Long wid = Long.parseLong(request.getParameter("wid"));
+        Long wid;
+        try{
+            wid = Long.parseLong(request.getParameter("wid"));
+        }catch(Exception e){
+            wid=0L;
+        }
 
         for(int i = 1 ; i <= 3 ; i++){
             if(request.getParameter("studentChecked" + i) != null) {
-                Long studentMid = Long.parseLong(request.getParameter("studentMid" + i));
+                Long studentMid = Long.parseLong("".equals(request.getParameter("studentMid" + i))?"0":request.getParameter("studentMid" + i));
                 String studentName = request.getParameter("studentName" + i);
                 String studentIDCard = request.getParameter("studentIDCard" + i);
                 String studentGrade = request.getParameter("studentGrade" + i);
-                Long studentAge = Long.parseLong(request.getParameter("studentAge" + i));
+                Long studentAge = Long.parseLong("".equals(request.getParameter("studentAge" + i))?"0":request.getParameter("studentAge" + i));
                 String studentCollege = request.getParameter("studentCollege" + i);
                 String studentMajor = request.getParameter("studentMajor" + i);
                 String studentEmail = request.getParameter("studentEmail" + i);
@@ -178,7 +183,13 @@ public class Enroll extends HttpServlet {
 
         //获取数据,转换类型
         String season = request.getParameter("season");
-        Long wid = Long.parseLong(request.getParameter("wid"));
+        Long wid;
+        try{
+            wid = Long.parseLong(request.getParameter("wid"));
+        }catch(Exception e){
+            wid=0L;
+        }
+
         String name = request.getParameter("name");
         Long sid = Long.parseLong(request.getParameter("sid"));
 //        String schoolname = request.getParameter("schoolname");
