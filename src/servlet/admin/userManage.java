@@ -3,8 +3,10 @@ package servlet.admin;
 import com.google.gson.Gson;
 import dao.SchoolInfoDao;
 import dao.UserDao;
+import dao.UserInfoDao;
 import entity.SchoolInfo;
 import entity.User;
+import entity.UserInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utils.NetUtils;
@@ -75,7 +77,7 @@ public class userManage extends HttpServlet {
         if("update".equals(method)){
             String uid_str = request.getParameter("uid");
             Integer uid = uid_str==null?0:Integer.parseInt(uid_str);
-            String userName = request.getParameter("userName");
+            String userName = request.getParameter("username");
             String password = request.getParameter("password");
             String type = request.getParameter("type");
 
@@ -88,7 +90,7 @@ public class userManage extends HttpServlet {
             return;
         }
 
-        //查询学校信息
+        //查询用户信息
         if("query".equals(method)){
             String username = request.getParameter("userName");
             String type = request.getParameter("type");
@@ -105,6 +107,11 @@ public class userManage extends HttpServlet {
                 tempMap.put("username",tempUser.getUsername());
                 tempMap.put("password",tempUser.getPassword());
                 tempMap.put("type",tempUser.getType());
+                List<UserInfo> tmpUserInfoList = UserInfoDao.queryUserInfo(new UserInfo(tempUser.getUid(),null,null,null,null,null),1,1);
+                UserInfo userInfo = tmpUserInfoList.size()==0?new UserInfo():tmpUserInfoList.get(0);
+                tempMap.put("sex",userInfo.getSex()==null?"":userInfo.getSex());
+                tempMap.put("name",userInfo.getName()==null?"":userInfo.getName());
+                tempMap.put("phone", userInfo.getPhone()==null?"":userInfo.getPhone());
                 myList.add(tempMap);
             }
             resultMap.put("users",myList);

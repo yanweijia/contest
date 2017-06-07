@@ -37,7 +37,7 @@
         <if test="_parameter!=null">
             <where>
                 <if test="user.type!=null">
-                    AND type=#{user.type}
+                    AND type LIKE '%' #{user.type} '%'
                 </if>
                 <if test="user.uid!=null">
                     AND uid=#{user.uid}
@@ -79,7 +79,7 @@
                     password=#{password},
                 </if>
                 <if test="type!=null">
-                    test=#{test},
+                    type=#{type},
                 </if>
             </set>
         WHERE uid=#{uid}
