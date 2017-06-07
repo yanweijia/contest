@@ -38,14 +38,14 @@ public class PostNotice extends HttpServlet {
 
 
         //获取用户编号
-        Integer uid = (Integer)session.getAttribute("uid");
+        Long uid = (Long)session.getAttribute("uid");
 
         if(uid==null || uid==0){
             NetUtils.writeResultToBrowser(out,false,"用户未登录,无法发布新闻");
             return;
         }
         //判断用户是否拥有发送notice的权限.在过滤器判断即可
-        if(!"管理员".equals(UserDao.getUserType(uid))){
+        if(!"管理员".equals(UserDao.getUserType(uid.intValue()))){
             NetUtils.writeResultToBrowser(out,false,"您没有发送新闻的权限,仅限系统管理员发送,发送失败!");
             return;
         }

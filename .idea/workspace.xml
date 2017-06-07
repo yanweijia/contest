@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="">
+    <list default="true" id="9bbc3476-8f9a-48b9-9403-0110fcb0b41f" name="Default" comment="xss过滤器仅匹配指定网页,防止过滤失败">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" afterPath="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resource/js/post.js" afterPath="$PROJECT_DIR$/web/resource/js/post.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlet/PostNotice.java" afterPath="$PROJECT_DIR$/src/servlet/PostNotice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/notice/viewNotice.jsp" afterPath="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,22 +105,9 @@
       <file leaf-file-name="viewNotice.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/notice/viewNotice.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="475">
+              <caret line="37" column="101" lean-forward="false" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userManage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/page/admin/admin/userManage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="92" column="54" lean-forward="true" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
-              <folding>
-                <marker date="1496860542359" expanded="true" signature="2709:2727" ph="..." />
-                <marker date="1496860542359" expanded="true" signature="3706:3712" ph="&amp;nbsp;" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -137,20 +122,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoticeDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/NoticeDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
-              <folding>
-                <marker date="1496861496866" expanded="true" signature="765:836" ph="INSERT INTO notice... " />
-                <marker date="1496861496866" expanded="true" signature="2303:2335" ph="SELECT * FRO... notice" />
-                <marker date="1496861496866" expanded="true" signature="3292:3343" ph="UPDATE notic... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="postNotice.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -161,11 +132,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resource/js/post.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostNotice.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/servlet/PostNotice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -255,11 +236,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/servlet/admin/admin.java" />
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/UserInfo.xml" />
         <option value="$PROJECT_DIR$/src/dao/WorksDao.java" />
         <option value="$PROJECT_DIR$/web/resource/css/post.css" />
-        <option value="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
         <option value="$PROJECT_DIR$/web/resource/css/viewNotice.css" />
         <option value="$PROJECT_DIR$/web/plug-in/paper-kit-style/readme.html" />
         <option value="$PROJECT_DIR$/web/resource/js/admin.js" />
@@ -269,7 +248,6 @@
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/TeamMember.xml" />
         <option value="$PROJECT_DIR$/src/config/mybatis/sqlxml/Works.xml" />
         <option value="$PROJECT_DIR$/src/servlet/Works.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/contest.iml" />
         <option value="$PROJECT_DIR$/web/plug-in/ueditor/jsp/config.json" />
         <option value="$PROJECT_DIR$/src/dao/SchoolInfoDao.java" />
@@ -303,9 +281,12 @@
         <option value="$PROJECT_DIR$/src/servlet/admin/userManage.java" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/dao/NoticeDao.java" />
         <option value="$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp" />
         <option value="$PROJECT_DIR$/web/resource/js/post.js" />
+        <option value="$PROJECT_DIR$/src/servlet/PostNotice.java" />
+        <option value="$PROJECT_DIR$/src/dao/NoticeDao.java" />
+        <option value="$PROJECT_DIR$/web/notice/viewNotice.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -1659,14 +1640,7 @@
       <workItem from="1495106968183" duration="81251000" />
       <workItem from="1495875411657" duration="2136000" />
       <workItem from="1495901705740" duration="2949000" />
-      <workItem from="1496028238545" duration="83053000" />
-    </task>
-    <task id="LOCAL-00013" summary="调整配置文件目录结构">
-      <created>1493910720096</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1493910720096</updated>
+      <workItem from="1496028238545" duration="84121000" />
     </task>
     <task id="LOCAL-00014" summary="1.DBAccess.java 访问数据库的类完成&#10;2.数据库对应实体类的Dao层编写完成,对应sql语句xml也编写完成,可以使用">
       <created>1494008007657</created>
@@ -2004,11 +1978,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496860785572</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="新闻存数据库的时候舍弃base64加密,速度太慢">
+      <created>1496861592357</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1496861592357</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529059000" />
+    <option name="totallyTimeSpent" value="530127000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2095,7 +2076,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.登录逻辑验证编写 /login.action&#10;2./login.action 和/sliderOperate.action页面编码修改默认utf-8(浏览器显示),页面获取的信息无异常" />
     <MESSAGE value="去除response.setContentType(),之前设置出错,导致$.post()获取到结果无法弹出." />
     <MESSAGE value="1.admin.action管理页面控制层做好&#10;2.admin左侧菜单栏" />
     <MESSAGE value="1.网站后台模型搭建完成" />
@@ -2120,7 +2100,8 @@
     <MESSAGE value="func:complete 新建学校&amp;学校信息维护" />
     <MESSAGE value="func:complete 新增用户&#10;bugfix:新增用户后没有同步新增用户信息,原因为userinfo表的sex没有默认值" />
     <MESSAGE value="核心功能基本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="核心功能基本完成" />
+    <MESSAGE value="新闻存数据库的时候舍弃base64加密,速度太慢" />
+    <option name="LAST_COMMIT_MESSAGE" value="新闻存数据库的时候舍弃base64加密,速度太慢" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2133,22 +2114,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/contest.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resource/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -2362,14 +2327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/page/admin/admin/newSchool.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -2520,14 +2477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/updateUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -2540,14 +2489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-209">
           <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="126" column="43" lean-forward="false" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -2568,26 +2509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/notice/viewNotice.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/NoticeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
-          <folding>
-            <marker date="1496861496866" expanded="true" signature="765:836" ph="INSERT INTO notice... " />
-            <marker date="1496861496866" expanded="true" signature="2303:2335" ph="SELECT * FRO... notice" />
-            <marker date="1496861496866" expanded="true" signature="3292:3343" ph="UPDATE notic... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/page/admin/admin/postNotice.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
@@ -2600,6 +2521,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/NoticeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="96" column="57" lean-forward="true" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
+          <folding>
+            <marker date="1496861496866" expanded="true" signature="765:836" ph="INSERT INTO notice... " />
+            <marker date="1496861496866" expanded="true" signature="2303:2335" ph="SELECT * FRO... notice" />
+            <marker date="1496861496866" expanded="true" signature="3292:3343" ph="UPDATE notic... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/page/admin/admin/updateUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/notice/viewNotice.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="37" column="101" lean-forward="false" selection-start-line="37" selection-start-column="101" selection-end-line="37" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="126" column="43" lean-forward="false" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/PostNotice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>

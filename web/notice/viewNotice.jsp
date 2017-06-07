@@ -35,6 +35,7 @@
     String noticeTitle = notice.getTitle();
     String type = notice.getType();
     String content = notice.getContent();
+    content = content.replaceAll("＜","<").replaceAll("＞",">").replaceAll("“","\"").replaceAll("＆","&");
 %>
 
 
