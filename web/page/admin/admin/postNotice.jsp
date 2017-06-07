@@ -15,7 +15,7 @@
 <script type="text/javascript" charset="utf-8" src="<%=NetUtils.getBasePath(request) %>plug-in/ueditor/lang/zh-cn/zh-cn.js"></script>
 
 
-<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/base64.js"></script>   <%--base64加密--%>
+<%--<script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/base64.js"></script>   &lt;%&ndash;base64加密&ndash;%&gt;--%>
 <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/post.js"></script>
 <link href="<%=NetUtils.getBasePath(request) %>resource/css/post.css" rel="stylesheet" type="text/css" />
 

@@ -94,7 +94,7 @@ public class NoticeDao {
             int viewCount = rs.getInt("viewCount");
             String noticeTitle = rs.getString("title");
             String noticeType = rs.getString("type");
-            String noticeContent = CodeUtils.Base64Decode(rs.getString("content"));
+            String noticeContent = rs.getString("content");
 
             //生成一个新的实例
             notice = new Notice(noticeID,noticeAuthor,postTime,viewCount,noticeTitle,noticeType,noticeContent);

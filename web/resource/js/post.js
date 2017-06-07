@@ -15,7 +15,8 @@ function checkAndSubmit(){
 
     var noticeTitle = $('#noticeTitle').val();
     var noticeAuthor = $('#noticeAuthor').val();
-    var noticeContent = BASE64.encoder(ueditor.getContent());
+    // var noticeContent = BASE64.encoder(ueditor.getContent());
+    var noticeContent = ueditor.getContent();
     var noticeType = $('#noticeType').val();
 
     //添加到form隐藏域,进行提交

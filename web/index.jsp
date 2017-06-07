@@ -107,7 +107,7 @@
                 <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
                         <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                            <li class="active"><a href="#contest-notice" id="noticeNavBar-notice" data-toggle="tab">通知</a></li>
+                            <li class="active"><a href="#contest-notice" id="noticeNavBar-notice" data-toggle="tab">公告</a></li>
                             <li><a href="#contest-news" id="noticeNavBar-news" data-toggle="tab">新闻</a></li>
                             <li><a href="#contest-info" id="noticeNavBar-info" data-toggle="tab">大赛信息</a></li>
                         </ul>
@@ -116,7 +116,7 @@
                 <div id="notice-tab-content" class="tab-content text-center">
                     <div class="tab-pane active" id="contest-notice">
                         <%--这里放大赛通知--%>
-                        <jsp:include page="notice/list.jsp?pageNum=1&perPage=8&type=通知&pageType=mini"/>
+                        <jsp:include page="notice/list.jsp?pageNum=1&perPage=8&type=公告&pageType=mini"/>
                     </div>
                     <div class="tab-pane" id="contest-news">
                         <%--这里放大赛新闻--%>
