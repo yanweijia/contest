@@ -12,7 +12,7 @@
         </label>
         <label for="school">
             学校名称:
-            <input type="text" name="school" id="school" placeholder="支持模糊查询" ${(type eq "学校负责人")?"readonly":""}
+            <input type="text" name="school" id="school" placeholder="支持模糊查询" ${(type eq "学校负责人")?"readonly":""} style="color:${(type eq "学校负责人")?"gray":""};"
                    value="<%=("学校负责人".equals(""+session.getAttribute("type")))?(SchoolInfoDao.querySchoolInfo(null,null,(Long)session.getAttribute("uid"),1,1).get(0).getName()):("") %>"
             />
 
@@ -132,11 +132,11 @@
 
 
     /**
-     *  验证数据斌显示数据
+     *  验证数据并显示数据
      */
     function checkBeforeViewWorks(){
         $('#submit_method').val('query');
-        $.post('/viewWorks.action',$('#form_viewWorks').serialize(),function(data){
+        $.post('<%=NetUtils.getBasePath(request) %>viewWorks.action',$('#form_viewWorks').serialize(),function(data){
             data = eval('('+data+')');
             if(!data.result){
                 alert(data.reason);

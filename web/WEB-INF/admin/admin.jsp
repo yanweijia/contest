@@ -21,23 +21,23 @@
         <div class="line"></div>
         <br/>
         <dl class="">
-            <dt onclick="loadContent('page/admin/welcome.jsp')">欢迎页面<img src=""></dt>
+            <dt onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/welcome.jsp')">欢迎页面<img src=""></dt>
         </dl>
 
         <dl class="">
             <dt>网站设置<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/sliderConfig.jsp')">首页slider维护</a></dd>
-            <dd><a href="#" onclick="loadContent('page/admin/admin/websiteConfig.jsp');">网站配置</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/sliderConfig.jsp')">首页slider维护</a></dd>
+            <dd><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/websiteConfig.jsp');">网站配置</a></dd>
         </dl>
         <dl class="">
             <dt>新闻管理<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/admin/noticeManage.jsp')">新闻管理</a></dd>
-            <dd><a href="#" onclick="loadIFrame('page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/noticeManage.jsp')">新闻管理</a></dd>
+            <dd><a href="#" onclick="loadIFrame('<%=NetUtils.getBasePath(request )%>page/admin/admin/postNotice.jsp');">新闻发布</a></dd>
         </dl>
         <dl class="">
             <dt>学校管理<img src=""></dt>
-            <dd class="first_dd"><a href="#">学校查询&amp;维护</a></dd>
-            <dd><a href="#">新增学校</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/schoolManage.jsp');">学校查询&amp;维护</a></dd>
+            <dd><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/admin/newSchool.jsp');">新增学校</a></dd>
         </dl>
 
         <dl class="">
@@ -48,14 +48,14 @@
 
         <dl class="">
             <dt>作品管理<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/viewWorks.jsp')">作品浏览&amp;导出</a></dd>
-            <%--<dd><a href="#" onclick="loadContent('page/admin/enrollment_table.jsp?method=new')">新增作品</a></dd>--%>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/viewWorks.jsp')">作品浏览&amp;导出</a></dd>
+            <%--<dd><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/enrollment_table.jsp?method=new')">新增作品</a></dd>--%>
         </dl>
 
         <dl class="">
             <dt>我的账户<img src=""></dt>
-            <dd class="first_dd"><a href="#" onclick="loadContent('page/admin/updateUserInfo.jsp')">信息维护</a></dd>
-            <dd><a href="#" onclick="loadContent('page/admin/changePassword.jsp')">修改用户密码</a></dd>
+            <dd class="first_dd"><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/updateUserInfo.jsp')">信息维护</a></dd>
+            <dd><a href="#" onclick="loadContent('<%=NetUtils.getBasePath(request )%>page/admin/changePassword.jsp')">修改用户密码</a></dd>
         </dl>
 
     </div>
@@ -70,15 +70,15 @@
 <script type="text/javascript" src="<%=NetUtils.getBasePath(request) %>resource/js/admin.js"></script>
 <script type="text/javascript">
     $(".leftsidebar_box dt").css({"background-color":"#3992d0"});
-    $(".leftsidebar_box dt img").attr("src","/resource/image/admin/select_xl01.png");
+    $(".leftsidebar_box dt img").attr("src","<%=NetUtils.getBasePath(request )%>/resource/image/admin/select_xl01.png");
     $(function(){
         $(".leftsidebar_box dd").hide();
         $(".leftsidebar_box dt").click(function(){
             $(".leftsidebar_box dt").css({"background-color":"#3992d0"})
             $(this).css({"background-color": "#317eb4"});
             $(this).parent().find('dd').removeClass("menu_chioce");
-            $(".leftsidebar_box dt img").attr("src","/resource/image/admin/select_xl01.png");
-            $(this).parent().find('img').attr("src","/resource/image/admin/select_xl.png");
+            $(".leftsidebar_box dt img").attr("src","<%=NetUtils.getBasePath(request )%>/resource/image/admin/select_xl01.png");
+            $(this).parent().find('img').attr("src","<%=NetUtils.getBasePath(request )%>/resource/image/admin/select_xl.png");
             $(".menu_chioce").slideUp();
             $(this).parent().find('dd').slideToggle();
             $(this).parent().find('dd').addClass("menu_chioce");

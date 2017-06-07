@@ -16,7 +16,7 @@
     <select id="querySchoolInfo" parameterType="java.util.Map" resultMap="SchoolInfoResult">
         SELECT sid,name,uid FROM school_info
         <where>
-            <if test="name!=null &amp;&amp; &quot;&quot;.equals(name.trim())">
+            <if test="name!=null &amp;&amp; !&quot;&quot;.equals(name.trim())">
                 AND name LIKE '%' #{name} '%'
             </if>
             <if test="sid!=null">
